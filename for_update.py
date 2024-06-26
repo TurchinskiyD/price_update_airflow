@@ -1,4 +1,5 @@
 import os
+from datetime import datetime
 
 import openpyxl
 import requests
@@ -75,7 +76,10 @@ def create_price_xlsx(data_outfitter):
         worksheet.cell(row=row_num, column=3, value=data_outfitter[key]['price'])
         worksheet.cell(row=row_num, column=4, value=data_outfitter[key]['name'])
 
-    workbook.save("price_update.xlsx")
+    now = datetime.now()
+    formatted_time = now.strftime("%Y-%m-%d_%H_%M")
+
+    workbook.save(f"price_update_{formatted_time}.xlsx")
 
 
 if __name__ == "__main__":
@@ -110,6 +114,3 @@ if __name__ == "__main__":
         add_for_update(name_func, result_dict)
 
     create_price_xlsx(data_for_update)
-
-
-
