@@ -1,7 +1,6 @@
 import os
 from datetime import datetime
-
-import openpyxl
+import pandas as pd
 import requests
 
 import main_adr
@@ -54,32 +53,31 @@ def add_for_update(name, dictionary):
 
 
 def create_price_xlsx(data_outfitter):
-    workbook = openpyxl.Workbook()
+    data = [
+        {
+            'Артикул': key,
+            'Наличие': item['available'],
+            'Цена': item['price'],
+            'Назва': item['name']
+        }
+        for key, item in data_outfitter.items()
+    ]
 
-    # вибираємо активний лист
-    worksheet = workbook.active
+    # Створюємо DataFrame
+    df = pd.DataFrame(data)
 
-    # додаємо заголовки стовпців
-    worksheet['A1'] = 'Артикул'
-    worksheet['B1'] = 'Наличие'
-    worksheet['C1'] = 'Цена'
-    worksheet['D1'] = 'Назва'
-
-    keys = list(data_outfitter.keys())
-
-    for i in range(len(keys)):
-        key = keys[i]
-
-        row_num = i + 2  # рядок для запису даних, починаємо з другого рядка
-        worksheet.cell(row=row_num, column=1, value=key)
-        worksheet.cell(row=row_num, column=2, value=data_outfitter[key]['available'])
-        worksheet.cell(row=row_num, column=3, value=data_outfitter[key]['price'])
-        worksheet.cell(row=row_num, column=4, value=data_outfitter[key]['name'])
-
+    # Форматуємо дату і час для назви файлів
     now = datetime.now()
-    formatted_time = now.strftime("%Y-%m-%d_%H_%M")
+    formatted_time = now.strftime("%Y_%m_%d_%H_%M")
 
-    workbook.save(f"price_update_{formatted_time}.xlsx")
+    # Зберігаємо у форматах Excel і CSV
+    excel_file = f"price_update_{formatted_time}.xlsx"
+    csv_file = f"price_update_{formatted_time}.csv"
+
+    df.to_excel(excel_file, index=False)  # Збереження у форматі Excel
+    df.to_csv(csv_file, index=False, encoding='utf-8-sig')  # Збереження у форматі CSV (UTF-8 для кирилиці)
+
+    print(f"Файли збережено: {excel_file}, {csv_file}")
 
 
 if __name__ == "__main__":
