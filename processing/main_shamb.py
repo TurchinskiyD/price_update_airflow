@@ -1,10 +1,13 @@
 import xlrd
+import os
 
 
 def shamb_file_operation():
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(base_dir, "../price/shambala.xls")
 
     # завантажити книгу Excel з файлу
-    workbook = xlrd.open_workbook("price/shambala.xls")
+    workbook = xlrd.open_workbook(file_path)
 
     # отримати активний аркуш
     worksheet = workbook.sheet_by_index(0)

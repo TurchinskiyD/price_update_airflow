@@ -2,17 +2,8 @@ import os
 from datetime import datetime
 import pandas as pd
 import requests
-
-import main_adr
-import main_atl
-import main_dasmart
-import main_dosp
-import main_kemp
-import main_norf
-import main_outfit
-import main_shamb
-import main_swa
-import main_trp
+from processing import main_adr, main_atl, main_dasmart, main_dosp, main_kemp, main_norf, main_outfit, main_shamb, \
+    main_swa, main_trp
 
 
 def download_file(url, name):

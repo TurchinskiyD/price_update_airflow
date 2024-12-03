@@ -1,8 +1,12 @@
 import xlrd
+import os
 
 # завантажити книгу Excel з файлу
 def kemping_file_operation():
-    work_book = xlrd.open_workbook("price/kemping.xls")
+
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(base_dir, "../price/kemping.xls")
+    work_book = xlrd.open_workbook(file_path)
 
     # отримати активний аркуш
     work_sheet = work_book.sheet_by_index(0)

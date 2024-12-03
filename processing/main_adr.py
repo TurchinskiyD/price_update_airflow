@@ -1,9 +1,12 @@
 import xml.etree.ElementTree as ET
+import os
 
 
 def adr_file_operation():
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(base_dir, '../price/adrenalin.xml')
 
-    tree_adr = ET.parse('price/adrenalin.xml')
+    tree_adr = ET.parse(file_path)
     root_adr = tree_adr.getroot()
 
     data_adr = {}

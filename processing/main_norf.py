@@ -1,9 +1,14 @@
 import xlrd
+import os
 
 
 def norf_file_operation():
+
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(base_dir, "../price/norfin.xls")
+
     # завантажити книгу Excel з файлу
-    workbook = xlrd.open_workbook("price/norfin.xls")
+    workbook = xlrd.open_workbook(file_path)
 
     # отримати активний аркуш
     worksheet = workbook.sheet_by_index(0)
