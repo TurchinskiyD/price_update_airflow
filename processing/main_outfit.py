@@ -4,8 +4,11 @@ import openpyxl
 
 
 def outfit_file_operation():
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(base_dir, "../price/outfitter.xlsx")
+
     # завантажити книгу Excel з файлу
-    wb = openpyxl.load_workbook(filename="price/outfitter.xlsx")
+    wb = openpyxl.load_workbook(filename=file_path)
 
     # отримати активний аркуш
     ws = wb.active

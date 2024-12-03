@@ -1,9 +1,12 @@
 import xml.etree.ElementTree as ET
+import os
 
 
 def dosp_file_operation():
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(base_dir, '../price/dospehi.xml')
 
-    tree_dosp = ET.parse('price/dospehi.xml')
+    tree_dosp = ET.parse(file_path)
     root_dosp = tree_dosp.getroot()
 
     data_dosp = {}

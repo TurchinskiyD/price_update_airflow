@@ -1,9 +1,13 @@
 import xml.etree.ElementTree as ET
+import os
 
 
 def atl_file_operation():
 
-    tree = ET.parse('price/atlantmarket.xml')
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(base_dir, "../price/atlantmarket.xml")
+
+    tree = ET.parse(file_path)
     root = tree.getroot()
 
     data = {}
