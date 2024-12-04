@@ -63,7 +63,7 @@ def create_price_xlsx(data_outfitter):
 
     # Зберігаємо у форматах Excel і CSV
     excel_file = f"price_update_{formatted_time}.xlsx"
-    csv_file = f"price_update_{formatted_time}.csv"
+    csv_file = f"price_update.csv"
 
     df.to_excel(excel_file, index=False)  # Збереження у форматі Excel
     df.to_csv(csv_file, index=False, encoding='utf-8-sig')  # Збереження у форматі CSV (UTF-8 для кирилиці)
