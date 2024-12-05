@@ -4,5 +4,8 @@ __pycache__
 /price/*.xlsx
 /price/*.xml
 config.py
-*.csv
-*.xlsx
+price_update*.csv
+price_update*.xlsx
+price/dospehi.xml
+price/swa.xlsx
+price_update.xlsx
