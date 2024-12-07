@@ -12,7 +12,7 @@ DATABASE_URL = SQLALCHEMY_DATABASE_URI
 csv_file_path = "price_update.csv"
 
 
-def load_csv_to_db(file_path, db_connection):
+def processing_csv(file_path, db_connection):
     engine = create_engine(db_connection)
     Price.metadata.create_all(engine)  # Автоматично створює таблиці, якщо їх ще немає
     Session = sessionmaker(bind=engine)
@@ -52,5 +52,3 @@ def load_csv_to_db(file_path, db_connection):
     finally:
         session.close()
 
-
-load_csv_to_db(csv_file_path, DATABASE_URL)
