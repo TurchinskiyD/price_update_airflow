@@ -35,7 +35,8 @@ def fetch_data_from_db(db_conn_config):
 
 
 # Функція для збереження файлів у S3
-def upload_to_s3(dataframe, filename, s3_conn_config):
+def upload_to_s3(dataframe, s3_conn_config):
+
     s3 = boto3.client(
         's3',
         aws_access_key_id=s3_conn_config['aws_access_key_id'],
@@ -48,6 +49,10 @@ def upload_to_s3(dataframe, filename, s3_conn_config):
         dataframe.to_excel(writer, index=False, sheet_name='Sheet1')
 
     buffer.seek(0)
+
+    now = datetime.now()
+    formatted_time = now.strftime("%Y_%m_%d_%H_%M")
+    filename = f'update_with_sale_{formatted_time}.xlsx'
 
     s3.upload_fileobj(buffer, S3_CONFIG['bucket_name'], filename)
     print(f"Uploaded {filename} to S3")
@@ -65,24 +70,3 @@ def process_data(df):
 
     return df
 
-
-now = datetime.now()
-formatted_time = now.strftime("%Y_%m_%d_%H_%M")
-
-
-# Основна функція
-def main():
-    try:
-        print("Fetching data from database...")
-        df = fetch_data_from_db(DB_CONFIG)
-
-        print("Uploading XLSX file to S3...")
-        upload_to_s3(process_data(df), f'update_with_sale_{formatted_time}.xlsx', S3_CONFIG)
-
-        print("Process completed successfully!")
-    except Exception as e:
-        print("Error in processing:", e)
-
-
-if __name__ == "__main__":
-    main()

@@ -77,8 +77,3 @@ def load_excel_to_database(file_path, db_connection_string):
         print(f"Помилка при записі даних: {e}")
     finally:
         session.close()
-
-
-
-download_file_from_s3(BUCKET_NAME, FILE_NAME, LOCAL_FILE_PATH)
-load_excel_to_database(LOCAL_FILE_PATH, DB_CONNECTION_STRING)
