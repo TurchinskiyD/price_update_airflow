@@ -1,8 +1,8 @@
 /.venv
 /.idea
 __pycache__
-/price/*.xlsx
-/price/*.xml
 config.py
-*.csv
-*.xlsx
+price_update.csv
+sale.xlsx
+price_update*.xlsx
+/price/*
