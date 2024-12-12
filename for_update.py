@@ -5,7 +5,13 @@ import requests
 
 
 def download_file(url, name):
-    file_path = os.path.join("price/", name)
+    # Шлях до файлу
+    directory = "price"
+    file_path = os.path.join(directory, name)
+
+    # Створимо дерикторію, якщо вона не існує, та надамо права доступу
+    if not os.path.exists(directory):
+        os.makedirs(directory, mode=0o755)  # 0o755 надаэ права читання і виконання, але запис для власника
 
     # виконати запит GET до сервера та отримати відповідь
     try:

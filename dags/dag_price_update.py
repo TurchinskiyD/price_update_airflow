@@ -27,6 +27,7 @@ from for_update import download_file, add_for_update, create_price_xlsx
 from load_csv_to_db import processing_csv
 from load_sale_file import download_file_from_s3, load_excel_to_database
 from join_table_load_s3 import fetch_data_from_db, process_data, upload_to_s3
+from main import functions_list
 
 import sys
 sys.path.append("..")
@@ -50,6 +51,7 @@ S3_CONFIG = {
     'aws_secret_access_key': AWS_SECRET_ACCESS_KEY
 }
 
+
 with DAG(
     dag_id='price_update_pipeline',
     default_args=default_args,
@@ -70,17 +72,19 @@ with DAG(
     # Таск 2. Обробка основного прайсу для порівняння з іншими
     outfit_task = PythonOperator(
         task_id='process_outfit',
-        python_callable=main_outfit.outfit_file_operation
+        python_callable=outfit_file_operation,
+        execution_timeout=timedelta(minutes=10),
+        do_xcom_push=True  # зберігати результати в XCom
     )
 
     # Таск 3. Додавання результатів обробки прайсів до порівняння
-    add_update_task = PythonOperator(
-        task_id='add_update_data',
-        python_callable=lambda: [
-            add_for_update(name_func, func(), main_outfit.outfit_file_operation())
-            for name_func, func in functions_list
-        ]
-    )
+    def add_update_data(**kwargs):
+        # отрммуємо дані з XCom
+        data_for_update = kwargs['ti'].xcom_pull(task_ids='process_outfit')
+
+        for name_func, func in functions_list:
+            result_dict = func()
+            add_for_update(name_func, result_dict, data_for_update)
 
     # Таск 5. Створення xlsx файлу
     create_price_task = PythonOperator(
