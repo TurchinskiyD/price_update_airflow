@@ -34,6 +34,19 @@ def fetch_data_from_db(db_conn_config):
         raise
 
 
+def process_data(df):
+    # Перейменування колонок
+    df.columns = ['Артикул', 'Наявність', 'Ціна', 'Назва', 'Знижка']
+
+    # Перетворення 'Ціна' в числовий формат
+    df['Ціна'] = pd.to_numeric(df['Ціна'], errors='coerce')
+
+    # Замінити порожні значення у 'Знижка' на 0
+    df['Знижка'] = df['Знижка'].fillna(0)
+
+    return df
+
+
 # Функція для збереження файлів у S3
 def upload_to_s3(dataframe, s3_conn_config):
 
@@ -58,15 +71,4 @@ def upload_to_s3(dataframe, s3_conn_config):
     print(f"Uploaded {filename} to S3")
 
 
-def process_data(df):
-    # Перейменування колонок
-    df.columns = ['Артикул', 'Наявність', 'Ціна', 'Назва', 'Знижка']
-
-    # Перетворення 'Ціна' в числовий формат
-    df['Ціна'] = pd.to_numeric(df['Ціна'], errors='coerce')
-
-    # Замінити порожні значення у 'Знижка' на 0
-    df['Знижка'] = df['Знижка'].fillna(0)
-
-    return df
 

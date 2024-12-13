@@ -20,7 +20,8 @@ from config.config import (link_list, SQLALCHEMY_DATABASE_URI, DB_POSTGRES_CONFI
                            AWS_SECRET_ACCESS_KEY)
 
 # Дані для обробки
-csv_file_path = "price_update.csv"
+csv_file_path = "/data/price_update.csv"
+sale_file_path = "/data/sale.xlsx"
 DATABASE_URL = SQLALCHEMY_DATABASE_URI
 DB_CONFIG = DB_POSTGRES_CONFIG
 S3_CONFIG = {
@@ -28,6 +29,8 @@ S3_CONFIG = {
     'aws_access_key_id': AWS_ACCESS_KEY_ID,
     'aws_secret_access_key': AWS_SECRET_ACCESS_KEY
 }
+BUCKET_NAME = 'for-sales-bucket'
+FILE_NAME = 'sale.xlsx'
 
 
 # Конфігурація
@@ -120,30 +123,32 @@ with DAG(
         provide_context=True
     )
 
-    # # Завдання 6. Обробка CSV файлу для бази даних
-    # process_csv_task = PythonOperator(
-    #     task_id='process_csv',
-    #     python_callable=processing_csv,
-    #     op_kwargs={'file_path': csv_file_path, 'database_url': DATABASE_URL}
-    # )
-    #
-    # # Завдання 7. Завантаження файлу зі знижками до DB
-    # download_s3_task = PythonOperator(
-    #     task_id='download_sale_file',
-    #     python_callable=download_file_from_s3,
-    #     op_kwargs={
-    #         'bucket_name': S3_CONFIG['bucket_name'],
-    #         'file_name': 'sale.xlsx',
-    #         'local_file_path': 'sale.xlsx'
-    #     }
-    # )
-    #
-    # # Завдання 8. Завантаження файлу з оновленими прайсами до DB
-    # load_excel_task = PythonOperator(
-    #     task_id='load_excel_to_db',
-    #     python_callable=load_excel_to_database,
-    #     op_kwargs={'file_path': 'sale.xlsx', 'db_url': DATABASE_URL}
-    # )
+    # Завдання 5 Завантаження файлу з оновленими прайсами до DB
+    process_csv_task = PythonOperator(
+        task_id='process_csv',
+        python_callable=processing_csv,
+        op_kwargs={'file_path': csv_file_path, 'database_url': DATABASE_URL}
+    )
+
+    # Завдання 6. Завантаження файлу зі знижками з S3 bucket
+    download_s3_task = PythonOperator(
+        task_id='download_sale_file',
+        python_callable=download_file_from_s3,
+        op_kwargs={
+            'bucket_name': BUCKET_NAME,
+            'file_name': FILE_NAME,
+            'local_file_path': sale_file_path
+        }
+    )
+
+    # Завдання 7. Завантаження файлу зi знижками до DB
+    load_excel_task = PythonOperator(
+        task_id='load_excel_to_db',
+        python_callable=load_excel_to_database,
+        op_kwargs={'file_path': sale_file_path, 'db_connection_string': DATABASE_URL}
+    )
+
+
     #
     # # Завдання 9. Обробка файлу в Data Bas
     # process_db_task = PythonOperator(
