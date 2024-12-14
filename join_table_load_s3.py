@@ -7,7 +7,7 @@ from io import BytesIO
 
 import sys
 sys.path.append("..")
-from config import AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, DB_POSTGRES_CONFIG, SQLALCHEMY_DATABASE_URI
+from config.config import AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, DB_POSTGRES_CONFIG, SQLALCHEMY_DATABASE_URI
 
 # Конфігурація бази даних та S3
 DB_CONFIG = DB_POSTGRES_CONFIG

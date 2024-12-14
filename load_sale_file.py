@@ -6,7 +6,7 @@ from model.sale_load import Sale
 
 import sys
 sys.path.append("..")
-from config import SQLALCHEMY_DATABASE_URI, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
+from config.config import SQLALCHEMY_DATABASE_URI, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
 
 DB_CONNECTION_STRING = SQLALCHEMY_DATABASE_URI
 

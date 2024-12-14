@@ -7,7 +7,7 @@ from join_table_load_s3 import fetch_data_from_db, process_data, upload_to_s3
 
 import sys
 sys.path.append("..")
-from config import link_list, SQLALCHEMY_DATABASE_URI, DB_POSTGRES_CONFIG, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
+from config.config import link_list, SQLALCHEMY_DATABASE_URI, DB_POSTGRES_CONFIG, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
 
 
 DATABASE_URL = SQLALCHEMY_DATABASE_URI

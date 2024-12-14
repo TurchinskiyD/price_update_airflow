@@ -5,7 +5,7 @@ import pandas as pd
 
 import sys
 sys.path.append("..")
-from config import SQLALCHEMY_DATABASE_URI
+from config.config import SQLALCHEMY_DATABASE_URI
 
 # Підключення до бази даних
 DATABASE_URL = SQLALCHEMY_DATABASE_URI

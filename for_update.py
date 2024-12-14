@@ -7,7 +7,7 @@ from processing import main_adr, main_atl, main_dasmart, main_dosp, main_kemp, m
 
 import sys
 sys.path.append("..")
-from config import link_list
+from config.config import link_list
 
 
 def download_file(url, name):
