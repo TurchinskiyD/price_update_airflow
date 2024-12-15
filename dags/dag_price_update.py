@@ -1,6 +1,7 @@
 import os
 import sys
 import json
+import pandas as pd
 
 # Aбсолютний шлях до проекту
 sys.path.append('/price_update_airflow')
@@ -148,23 +149,35 @@ with DAG(
         op_kwargs={'file_path': sale_file_path, 'db_connection_string': DATABASE_URL}
     )
 
+    # Завдання 8. Об'єднання двох таблиць та отримання результату
+    process_db_task = PythonOperator(
+        task_id='process_db_data',
+        python_callable=fetch_data_from_db,
+        op_kwargs={'db_conn_config': DB_CONFIG}
+    )
 
-    #
-    # # Завдання 9. Обробка файлу в Data Bas
-    # process_db_task = PythonOperator(
-    #     task_id='process_db_data',
-    #     python_callable=lambda: process_data(fetch_data_from_db(DB_CONFIG))
-    # )
-    #
-    # # Завдання 10. Завантаження оновленого прайсу з доданими знижками до S3 bucket
-    # upload_s3_task = PythonOperator(
-    #     task_id='upload_clean_data_to_s3',
-    #     python_callable=upload_to_s3,
-    #     op_kwargs={
-    #         'data': process_data(fetch_data_from_db(DB_CONFIG)),
-    #         'config': S3_CONFIG
-    #     }
-    # )
+    # Завдання 9. Очистка отриманого з бази даних результату
+    def prepare_join_data(**kwargs):
+        ti = kwargs['ti']
+        # Отримуємо дані з XCom
+        raw_data = ti.xcom_pull(task_ids='process_db_data')
+        print(f"Type of data received from XCom: {type(raw_data)}")
+
+        # Перевірка типу
+        if isinstance(raw_data, pd.DataFrame):
+            df = raw_data
+        else:
+            raise ValueError(f"Unexpected data type received from XCom: {type(raw_data)}")
+
+        # Обробка даних
+        processed_df = process_data(df)
+        print(processed_df.head())
 
 
-    download_task >> outfit_task >> add_update_task >> prepare_xlsx_task
+    clean_data_task = PythonOperator(
+        task_id='clean_data',
+        python_callable=prepare_join_data
+    )
+
+    download_task >> outfit_task >> add_update_task >> prepare_xlsx_task >> process_csv_task
+    process_csv_task >> download_s3_task >> load_excel_task >> process_db_task >> clean_data_task
