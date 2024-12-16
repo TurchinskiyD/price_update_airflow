@@ -66,7 +66,6 @@ with DAG(
         do_xcom_push=True  # зберігати результати в XCom
     )
 
-
     # Таск 3. Додавання результатів обробки прайсів до порівняння
     def add_update_data(**kwargs):
         # отрммуємо дані з XCom
@@ -173,11 +172,31 @@ with DAG(
         processed_df = process_data(df)
         print(processed_df.head())
 
+        # Явне повернення оброблених даних, щоб вони збереглися в XCom
+        return processed_df
+
 
     clean_data_task = PythonOperator(
         task_id='clean_data',
         python_callable=prepare_join_data
     )
 
+    # Завдання 10. Завантаження оновленого прайсу з доданими знижками до S3 bucket
+    def upload_clean_data_to_s3(**context):
+        ti = context['ti']
+        dataframe = ti.xcom_pull(task_ids="clean_data")
+
+        if isinstance(dataframe, pd.DataFrame):
+            df = dataframe
+        else:
+            raise ValueError(f"Unexpected data type received from XCom: {type(dataframe)}")
+
+        upload_to_s3(df, S3_CONFIG)
+
+    upload_s3_task = PythonOperator(
+        task_id='upload_clean_data_to_s3',
+        python_callable=upload_clean_data_to_s3
+    )
+
     download_task >> outfit_task >> add_update_task >> prepare_xlsx_task >> process_csv_task
-    process_csv_task >> download_s3_task >> load_excel_task >> process_db_task >> clean_data_task
+    process_csv_task >> download_s3_task >> load_excel_task >> process_db_task >> clean_data_task >> upload_s3_task
