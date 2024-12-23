@@ -1,8 +1,8 @@
 /.venv
 /.idea
 __pycache__
-config.py
-price_update.csv
+config/config.py
+data/price_update.csv
 sale.xlsx
 price_update*.xlsx
 /price/*
@@ -16,3 +16,4 @@ price_update*.xlsx
 /price/shambala.xls
 /price/swa.xlsx
 /price/tramp.xlsx
+

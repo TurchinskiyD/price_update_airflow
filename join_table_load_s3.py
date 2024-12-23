@@ -4,19 +4,19 @@ import pandas as pd
 import boto3
 import psycopg2
 from io import BytesIO
-
-import sys
-sys.path.append("..")
-from config import AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, DB_POSTGRES_CONFIG, SQLALCHEMY_DATABASE_URI
-
-# Конфігурація бази даних та S3
-DB_CONFIG = DB_POSTGRES_CONFIG
-
-S3_CONFIG = {
-    'bucket_name': 'for-price-update-bucket',
-    'aws_access_key_id': AWS_ACCESS_KEY_ID,
-    'aws_secret_access_key': AWS_SECRET_ACCESS_KEY
-}
+#
+# import sys
+# sys.path.append("..")
+# from config.config import AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, DB_POSTGRES_CONFIG, SQLALCHEMY_DATABASE_URI
+#
+# # Конфігурація бази даних та S3
+# DB_CONFIG = DB_POSTGRES_CONFIG
+#
+# S3_CONFIG = {
+#     'bucket_name': 'for-price-update-bucket',
+#     'aws_access_key_id': AWS_ACCESS_KEY_ID,
+#     'aws_secret_access_key': AWS_SECRET_ACCESS_KEY
+# }
 
 
 # Функція для отримання даних з бази даних
@@ -32,6 +32,19 @@ def fetch_data_from_db(db_conn_config):
     except Exception as e:
         print("Error fetching data from database:", e)
         raise
+
+
+def process_data(df):
+    # Перейменування колонок
+    df.columns = ['Артикул', 'Наявність', 'Ціна', 'Назва', 'Знижка']
+
+    # Перетворення 'Ціна' в числовий формат
+    df['Ціна'] = pd.to_numeric(df['Ціна'], errors='coerce')
+
+    # Замінити порожні значення у 'Знижка' на 0
+    df['Знижка'] = df['Знижка'].fillna(0)
+
+    return df
 
 
 # Функція для збереження файлів у S3
@@ -54,19 +67,8 @@ def upload_to_s3(dataframe, s3_conn_config):
     formatted_time = now.strftime("%Y_%m_%d_%H_%M")
     filename = f'update_with_sale_{formatted_time}.xlsx'
 
-    s3.upload_fileobj(buffer, S3_CONFIG['bucket_name'], filename)
+    s3.upload_fileobj(buffer, s3_conn_config['bucket_name'], filename)
     print(f"Uploaded {filename} to S3")
 
 
-def process_data(df):
-    # Перейменування колонок
-    df.columns = ['Артикул', 'Наявність', 'Ціна', 'Назва', 'Знижка']
-
-    # Перетворення 'Ціна' в числовий формат
-    df['Ціна'] = pd.to_numeric(df['Ціна'], errors='coerce')
-
-    # Замінити порожні значення у 'Знижка' на 0
-    df['Знижка'] = df['Знижка'].fillna(0)
-
-    return df
 

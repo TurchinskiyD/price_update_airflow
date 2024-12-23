@@ -7,11 +7,12 @@ from join_table_load_s3 import fetch_data_from_db, process_data, upload_to_s3
 
 import sys
 sys.path.append("..")
-from config import link_list, SQLALCHEMY_DATABASE_URI, DB_POSTGRES_CONFIG, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
+from config.config import (link_list, SQLALCHEMY_DATABASE_URI, DB_POSTGRES_CONFIG, AWS_ACCESS_KEY_ID,
+                           AWS_SECRET_ACCESS_KEY)
 
 
 DATABASE_URL = SQLALCHEMY_DATABASE_URI
-csv_file_path = "price_update.csv"
+csv_file_path = "data/price_update.csv"
 
 functions_list = [("Атлант", main_atl.atl_file_operation),
                   ("Кемпінг", main_kemp.kemping_file_operation),
@@ -29,7 +30,7 @@ DB_CONNECTION_STRING = SQLALCHEMY_DATABASE_URI
 # Налаштування S3
 BUCKET_NAME = 'for-sales-bucket'
 FILE_NAME = 'sale.xlsx'
-LOCAL_FILE_PATH = 'sale.xlsx'
+LOCAL_FILE_PATH = 'data/sale.xlsx'
 
 # Конфігурація бази даних та S3
 DB_CONFIG = DB_POSTGRES_CONFIG

@@ -3,13 +3,13 @@ from sqlalchemy import create_engine
 from model.price_load import Price
 import pandas as pd
 
-import sys
-sys.path.append("..")
-from config import SQLALCHEMY_DATABASE_URI
-
-# Підключення до бази даних
-DATABASE_URL = SQLALCHEMY_DATABASE_URI
-csv_file_path = "price_update.csv"
+# import sys
+# sys.path.append("..")
+# from config import SQLALCHEMY_DATABASE_URI
+#
+# # Підключення до бази даних
+# DATABASE_URL = SQLALCHEMY_DATABASE_URI
+# csv_file_path = "data/price_update.csv"
 
 
 def processing_csv(file_path, db_connection):

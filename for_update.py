@@ -2,16 +2,16 @@ import os
 from datetime import datetime
 import pandas as pd
 import requests
-from processing import main_adr, main_atl, main_dasmart, main_dosp, main_kemp, main_norf, main_outfit, main_shamb, \
-    main_swa, main_trp
-
-import sys
-sys.path.append("..")
-from config import link_list
 
 
 def download_file(url, name):
-    file_path = os.path.join("price/", name)
+    # Шлях до файлу
+    directory = "price"
+    file_path = os.path.join(directory, name)
+
+    # Створимо дерикторію, якщо вона не існує, та надамо права доступу
+    if not os.path.exists(directory):
+        os.makedirs(directory, mode=0o755)  # 0o755 надаэ права читання і виконання, але запис для власника
 
     # виконати запит GET до сервера та отримати відповідь
     try:
@@ -64,9 +64,14 @@ def create_price_xlsx(dict_for_update):
     now = datetime.now()
     formatted_time = now.strftime("%Y_%m_%d_%H_%M")
 
-    # Зберігаємо у форматах Excel і CSV
-    excel_file = f"price_update_{formatted_time}.xlsx"
-    csv_file = f"price_update.csv"
+    # Визначаємо папку для збереження файлів
+    output_folder = "data"
+    os.makedirs(output_folder, exist_ok=True)  # Створюємо папку, якщо її не існує
+
+    # Формуємо шляхи для файлів
+    excel_file = os.path.join(output_folder, f"price_update_{formatted_time}.xlsx")
+    csv_file = os.path.join(output_folder, "price_update.csv")
+
 
     df.to_excel(excel_file, index=False)  # Збереження у форматі Excel
     df.to_csv(csv_file, index=False, encoding='utf-8-sig')  # Збереження у форматі CSV (UTF-8 для кирилиці)
