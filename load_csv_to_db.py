@@ -4,12 +4,16 @@ from model.price_load import Price
 import pandas as pd
 
 import sys
-sys.path.append("..")
-from config import SQLALCHEMY_DATABASE_URI
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.join(BASE_DIR, "config"))
+from config.config import SQLALCHEMY_DATABASE_URI
+
 
 # Підключення до бази даних
 DATABASE_URL = SQLALCHEMY_DATABASE_URI
-csv_file_path = "price_update.csv"
+file_path = "/home/ubuntu/airflow-project/price_update_airflow/output/price_update.csv"
 
 
 def processing_csv(file_path, db_connection):

@@ -7,11 +7,11 @@ from join_table_load_s3 import fetch_data_from_db, process_data, upload_to_s3
 
 import sys
 sys.path.append("..")
-from config import link_list, SQLALCHEMY_DATABASE_URI, DB_POSTGRES_CONFIG, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
+from config.config import link_list, SQLALCHEMY_DATABASE_URI, DB_POSTGRES_CONFIG, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
 
 
 DATABASE_URL = SQLALCHEMY_DATABASE_URI
-csv_file_path = "price_update.csv"
+csv_file_path = "/home/ubuntu/airflow-project/price_update_airflow/output/price_update.csv"
 
 functions_list = [("Атлант", main_atl.atl_file_operation),
                   ("Кемпінг", main_kemp.kemping_file_operation),
@@ -27,7 +27,7 @@ functions_list = [("Атлант", main_atl.atl_file_operation),
 DB_CONNECTION_STRING = SQLALCHEMY_DATABASE_URI
 
 # Налаштування S3
-BUCKET_NAME = 'for-sales-bucket'
+BUCKET_NAME = 'for-sales-buck'
 FILE_NAME = 'sale.xlsx'
 LOCAL_FILE_PATH = 'sale.xlsx'
 
@@ -35,7 +35,7 @@ LOCAL_FILE_PATH = 'sale.xlsx'
 DB_CONFIG = DB_POSTGRES_CONFIG
 
 S3_CONFIG = {
-    'bucket_name': 'for-price-update-bucket',
+    'bucket_name': 'for-price-update-buck',
     'aws_access_key_id': AWS_ACCESS_KEY_ID,
     'aws_secret_access_key': AWS_SECRET_ACCESS_KEY
 }

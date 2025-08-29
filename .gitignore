@@ -1,7 +1,20 @@
+
+
+venv/
+.env
+*.env
 /.venv
 /.idea
 __pycache__
+__pycache__/
+*.pyc
+logs/
+*.log
+secrets/
+config/
 config.py
+config/*.yaml
+config/*.yml
 price_update.csv
 sale.xlsx
 price_update*.xlsx
@@ -16,5 +29,3 @@ price/outfitter.xlsx
 price/shambala.xls
 price/swa.xlsx
 price/tramp.xlsx
-
-

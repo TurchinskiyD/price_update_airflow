@@ -1,10 +1,12 @@
 from sqlalchemy.orm import sessionmaker
 import boto3
+import botocore
 import pandas as pd
 from sqlalchemy import create_engine
 from model.sale_load import Sale
 
 import sys
+import os
 sys.path.append("..")
 from config.config import SQLALCHEMY_DATABASE_URI, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
 
@@ -16,15 +18,50 @@ from config.config import SQLALCHEMY_DATABASE_URI, AWS_ACCESS_KEY_ID, AWS_SECRET
 # LOCAL_FILE_PATH = 'sale.xlsx'
 
 
+#def download_file_from_s3(bucket_name, file_name, local_path):
+#    s3 = boto3.client(
+#        's3',
+#        aws_access_key_id=AWS_ACCESS_KEY_ID,
+#        aws_secret_access_key=AWS_SECRET_ACCESS_KEY
+#        )
+#    s3.download_file(bucket_name, file_name, local_path)
+#    print(f"Файл {file_name} завантажено з S3 до {local_path}")
+    
+    
 def download_file_from_s3(bucket_name, file_name, local_path):
+    # Нормалізація вхідних значень
+    bucket = bucket_name.strip()
+    key = file_name.lstrip('/')  # на випадок, якщо десь додався префікс '/'
+
+    # Діагностика: хто ми і що качаємо
+    sts = boto3.client('sts',
+        aws_access_key_id=AWS_ACCESS_KEY_ID,
+        aws_secret_access_key=AWS_SECRET_ACCESS_KEY)
+    ident = sts.get_caller_identity()
+    print(f"[S3 DEBUG] Account={ident['Account']} Arn={ident['Arn']}")
+    print(f"[S3 DEBUG] Bucket={repr(bucket)} Key={repr(key)} Local={repr(local_path)}")
+
+    # Явно беремо us-east-1 (цей бакет точно там)
     s3 = boto3.client(
         's3',
         aws_access_key_id=AWS_ACCESS_KEY_ID,
-        aws_secret_access_key=AWS_SECRET_ACCESS_KEY
-        )
-    s3.download_file(bucket_name, file_name, local_path)
-    print(f"Файл {file_name} завантажено з S3 до {local_path}")
+        aws_secret_access_key=AWS_SECRET_ACCESS_KEY,
+        region_name='us-east-1',
+    )
 
+    # Переконаємось, що папка існує
+    os.makedirs(os.path.dirname(local_path), exist_ok=True)
+
+    # Перевірка наявності об’єкта (дасть зрозумілу помилку, що саме не так)
+    try:
+        s3.head_object(Bucket=bucket, Key=key)
+    except botocore.exceptions.ClientError as e:
+        print(f"[S3 DEBUG] head_object error: {e.response.get('Error')}")
+        raise
+
+    # Завантаження
+    s3.download_file(bucket, key, local_path)
+    print(f"[S3] OK: s3://{bucket}/{key} → {local_path}")
 
 def load_excel_to_database(file_path, db_connection_string):
     # Зчитати Excel-файл

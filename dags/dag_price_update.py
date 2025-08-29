@@ -2,13 +2,18 @@ import os
 import sys
 import json
 import pandas as pd
+import botocore
 
-# Aбсолютний шлях до проекту
-sys.path.append('/price_update_airflow')
+# Шлях до проекту
+PROJECT_ROOT = "/home/ubuntu/airflow-project/price_update_airflow"  
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
 
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from datetime import datetime, timedelta
+
+
 from processing.main_outfit import outfit_file_operation
 from for_update import download_file, add_for_update, create_price_xlsx
 from load_csv_to_db import processing_csv
@@ -16,21 +21,21 @@ from load_sale_file import download_file_from_s3, load_excel_to_database
 from join_table_load_s3 import fetch_data_from_db, process_data, upload_to_s3
 from main import functions_list
 
-sys.path.append("..")
+
 from config.config import (link_list, SQLALCHEMY_DATABASE_URI, DB_POSTGRES_CONFIG, AWS_ACCESS_KEY_ID,
                            AWS_SECRET_ACCESS_KEY)
 
 # Дані для обробки
-csv_file_path = "/data/price_update.csv"
-sale_file_path = "/data/sale.xlsx"
+csv_file_path = "/home/ubuntu/airflow-project/price_update_airflow/output/price_update.csv"
+sale_file_path = "/home/ubuntu/airflow-project/price_update_airflow/output/sale.xlsx"
 DATABASE_URL = SQLALCHEMY_DATABASE_URI
 DB_CONFIG = DB_POSTGRES_CONFIG
 S3_CONFIG = {
-    'bucket_name': 'for-price-update-bucket',
+    'bucket_name': 'for-price-update-buck',
     'aws_access_key_id': AWS_ACCESS_KEY_ID,
     'aws_secret_access_key': AWS_SECRET_ACCESS_KEY
 }
-BUCKET_NAME = 'for-sales-bucket'
+BUCKET_NAME = 'for-sales-file-buck'
 FILE_NAME = 'sale.xlsx'
 
 
@@ -127,7 +132,7 @@ with DAG(
     process_csv_task = PythonOperator(
         task_id='process_csv',
         python_callable=processing_csv,
-        op_kwargs={'file_path': csv_file_path, 'database_url': DATABASE_URL}
+        op_kwargs={'file_path': csv_file_path, 'db_connection': DATABASE_URL}
     )
 
     # Завдання 6. Завантаження файлу зі знижками з S3 bucket
@@ -137,7 +142,7 @@ with DAG(
         op_kwargs={
             'bucket_name': BUCKET_NAME,
             'file_name': FILE_NAME,
-            'local_file_path': sale_file_path
+            'local_path': sale_file_path
         }
     )
 
