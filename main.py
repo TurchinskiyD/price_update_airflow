@@ -27,7 +27,7 @@ functions_list = [("Атлант", main_atl.atl_file_operation),
 DB_CONNECTION_STRING = SQLALCHEMY_DATABASE_URI
 
 # Налаштування S3
-BUCKET_NAME = 'for-sales-buck'
+BUCKET_NAME = 'for-sales-file-buck'
 FILE_NAME = 'sale.xlsx'
 LOCAL_FILE_PATH = 'sale.xlsx'
 

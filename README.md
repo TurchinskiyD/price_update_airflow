@@ -1,6 +1,6 @@
 ## Price update Airflow
 
-![Image alt](https://github.com/TurchinskiyD/price_update_airflow/blob/main/price_update.png)
+![Image alt](price_update.png)
 
 ### Даний проект допомагає автоматизувати обробку даних від постачальників для подальшого завантаження інформації на сайт.
 1. Завантаження файлів постачальників:
@@ -25,4 +25,4 @@
 6. Оркестрація:
 Усі ці етапи оркеструються за допомогою Apache Airflow, який керує виконанням задач та забезпечує їх послідовність і автоматизацію.
 
-![Image alt](https://github.com/TurchinskiyD/price_update_airflow/blob/main/airflow_pipelin.png)
+![Image alt](airflow_pipelin.png)
