@@ -3,6 +3,8 @@ name: Deploy to Server
 on:
   push:
     branches: [ "main" ]   # деплой тільки коли пуш у main
+    paths-ignore:
+      - 'price/**'         # ігноруємо всі зміни в папці price/
   workflow_dispatch:
 
 jobs:
