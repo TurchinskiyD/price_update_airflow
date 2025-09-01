@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="utf-8"?>
+<yml_catalog date="2025-09-01 14:48">
+	<shop>
+		<name>Компания Атлантмаркет</name>
+		<company>Компания Атлантмаркет</company>
+		<url>https://atlantmarket.com.ua</url>
+		<currencies>
+			<currency id="UAH" rate="1"/>
+
+		</currencies>
+		<categories>
+			<category id="1905" portal_id="">Інструменти</category>
+
+<category id="1906" portal_id="" parentId="1961">Ganzo мультитули</category>
+
+<category id="1909" portal_id="" parentId="1961">NexTool мультитули</category>
+
+<category id="1910" portal_id="" parentId="1961">Roxon мультитули</category>
+
+<category id="1913" portal_id="" parentId="1905">Adimanti лопати багатофункціональні</category>
+<category id="1914" portal_id="">Масла і мастила Brunox</category>
+<category id="1916" portal_id="">Ножі</category>
+
+<category id="1918" portal_id="" parentId="1916">Ножі Ganzo-Firebird-Adimanti</category>
+
+<category id="1919" portal_id="" parentId="2316">Ножі Ganzo 6а серія</category>
+
+<category id="1920" portal_id="" parentId="2315">Ножі Firebird 7а серія</category>
+
+<category id="1921" portal_id="" parentId="2316">Ножі Ganzo 8а серія</category>
+
+<category id="1922" portal_id="" parentId="2315">Ножі Firebird FH серія</category>
+
+<category id="1928" portal_id="" parentId="1916">Ruike ножі</category>
+
+<category id="1929" portal_id="" parentId="1928">Армійські ножі Ruike</category>
+
+<category id="1930" portal_id="" parentId="1928">Класичні ножі Ruike</category>
+
+<category id="1931" portal_id="" parentId="1928">Спеціальні моделі Ruike</category>
+<category id="1933" portal_id="">Одяг</category>
+
+<category id="1935" portal_id="" parentId="1933">DexShell шкарпетки</category>
+
+<category id="1936" portal_id="" parentId="1933">DexShell рукавички</category>
+
+<category id="1937" portal_id="" parentId="1933">DexShell шапки</category>
+<category id="1939" portal_id="">Точильні системи</category>
+
+<category id="1940" portal_id="" parentId="1939">Ganzo точила і каміння</category>
+
+<category id="1941" portal_id="" parentId="1939">Work Sharp точильні верстати і точила</category>
+<category id="1942" portal_id="">Ліхтарі</category>
+
+<category id="1943" portal_id="" parentId="1942">Fenix аксесуари</category>
+
+<category id="1944" portal_id="" parentId="1942">Fenix ліхтарі</category>
+
+<category id="1945" portal_id="" parentId="1944">Велофари Fenix</category>
+
+<category id="1946" portal_id="" parentId="1944">Кемпінгові ліхтарі Fenix</category>
+
+<category id="1947" portal_id="" parentId="1944">Наключні ліхтарі</category>
+
+<category id="1948" portal_id="" parentId="1944">Налобні ліхтарі Fenix</category>
+
+<category id="1951" portal_id="" parentId="1944">Ручні стандартні ліхтарі</category>
+
+<category id="1952" portal_id="" parentId="1942">Fenix ел живлення та зарядні пристрої</category>
+
+<category id="1956" portal_id="" parentId="1942">Ел живлення та зарядні пристрої</category>
+<category id="1961" portal_id="">Мультитули</category>
+
+<category id="1963" portal_id="" parentId="1905">Ganzo сокири і мачете</category>
+<category id="1992" portal_id="">Рюкзаки, багаж</category>
+
+<category id="2003" portal_id="" parentId="1939">Ruixin точила</category>
+
+<category id="2004" portal_id="" parentId="1918">Ножі Adimanti Skimen design</category>
+<category id="2075" portal_id="">Посуд</category>
+<category id="2077" portal_id="">Термоси та термокухлі</category>
+<category id="2079" portal_id="">Туристичне спорядження</category>
+
+<category id="2116" portal_id="" parentId="2075">BRS посуд</category>
+
+<category id="2117" portal_id="" parentId="2147">BRS газові пальники</category>
+
+<category id="2118" portal_id="" parentId="2268">BRS меблі</category>
+
+<category id="2124" portal_id="" parentId="1905">Nextool лопати багатофункціональні</category>
+<category id="2140" portal_id="">Взуття</category>
+<category id="2146" portal_id="">Пальники та обладнання</category>
+
+<category id="2147" portal_id="" parentId="2146">Газові пальники</category>
+
+<category id="2149" portal_id="" parentId="2146">Газові лампи</category>
+
+<category id="2151" portal_id="" parentId="2146">Аксесуари для пальників</category>
+
+<category id="2154" portal_id="" parentId="2146">Газові обігрівачі</category>
+
+<category id="2156" portal_id="" parentId="2146">Газові плитки</category>
+
+<category id="2163" portal_id="" parentId="1941">Work Sharp аксесуари до професiйних кухонних точилок</category>
+
+<category id="2164" portal_id="" parentId="1941">Work Sharp аксесуари до унiверсальних  электричних точилок</category>
+
+<category id="2165" portal_id="" parentId="1941">Work Sharp професiйнi кухоннi точилки электричнi</category>
+
+<category id="2166" portal_id="" parentId="1941">Work Sharp унiверсальнi точилки электричнi</category>
+
+<category id="2173" portal_id="" parentId="1944">Ліхтарі для дайвінгу Fenix</category>
+
+<category id="2174" portal_id="" parentId="1944">Індустріальні ліхтарі Fenix</category>
+
+<category id="2175" portal_id="" parentId="1944">Мисливські ліхтарі Fenix</category>
+
+<category id="2176" portal_id="" parentId="1944">Набори Fenix</category>
+
+<category id="2177" portal_id="" parentId="1944">Повсякденні ліхтарі Fenix</category>
+
+<category id="2178" portal_id="" parentId="1944">Пошуково-рятувальні ліхтарі Fenix</category>
+
+<category id="2179" portal_id="" parentId="1944">Тактичні ліхтарі Fenix</category>
+<category id="2227" portal_id="">Іграшки</category>
+
+<category id="2233" portal_id="" parentId="1941">WorkSharp ручні точила</category>
+<category id="2268" portal_id="">Меблі</category>
+<category id="2270" portal_id="">Намети</category>
+<category id="2279" portal_id="">Термопродукція</category>
+
+<category id="2282" portal_id="" parentId="2279">Акумулятори холоду</category>
+
+<category id="2315" portal_id="" parentId="1918">Ножі Firebird</category>
+
+<category id="2316" portal_id="" parentId="1918">Ножі Ganzo</category>
+
+<category id="2422" portal_id="" parentId="2316">Ножі Ganzo 7а серія</category>
+
+<category id="2467" portal_id="" parentId="2151">BRS аксесуари</category>
+
+<category id="2468" portal_id="" parentId="2149">BRS газові лампи</category>
+
+<category id="2469" portal_id="" parentId="2156">BRS плитки</category>
+
+<category id="2479" portal_id="" parentId="1905">Naturehike інструменти</category>
+
+<category id="2480" portal_id="" parentId="1942">Naturehike ліхтарі</category>
+
+<category id="2481" portal_id="" parentId="2268">Naturehike меблі</category>
+
+<category id="2482" portal_id="" parentId="2270">Naturehike намети</category>
+
+<category id="2483" portal_id="" parentId="2075">Naturehike посуд</category>
+
+<category id="2484" portal_id="" parentId="1992">Naturehike рюкзаки та сумки</category>
+
+<category id="2485" portal_id="" parentId="2077">Naturehike термоси</category>
+
+<category id="2486" portal_id="" parentId="2079">Naturehike гамаки</category>
+
+<category id="2487" portal_id="" parentId="2079">Naturehike матраци</category>
+
+<category id="2488" portal_id="" parentId="2079">Naturehike спальні мішки</category>
+
+<category id="2489" portal_id="" parentId="2079">Naturehike спорядження</category>
+
+<category id="2490" portal_id="" parentId="2079">Аксесуари до намету Naturehike</category>
+
+<category id="2525" portal_id="" parentId="2531">Naturehike рукавиці</category>
+
+<category id="2531" portal_id="" parentId="1933">Naturehike одяг</category>
+
+<category id="2532" portal_id="" parentId="1918">Ножі Adimanti Samson by Ganzo</category>
+
+<category id="2541" portal_id="" parentId="2146">Рідкопаливні пальники</category>
+
+<category id="2552" portal_id="" parentId="2147">Пальники Ganzo</category>
+
+<category id="2555" portal_id="" parentId="1913">Adimanti сокири</category>
+
+<category id="2556" portal_id="" parentId="1916">Roxon ножi</category>
+
+<category id="2560" portal_id="" parentId="2075">Roxon посуд</category>
+
+<category id="2563" portal_id="" parentId="2151">Adimanti газові балони</category>
+
+<category id="2565" portal_id="" parentId="2146">Газові болони</category>
+
+<category id="2569" portal_id="" parentId="2151">Naturehike аксесуари</category>
+
+<category id="2577" portal_id="" parentId="2146">Naturehike пальники</category>
+
+<category id="2579" portal_id="" parentId="2146">Спиртові пальники </category>
+
+<category id="2581" portal_id="" parentId="2579">Naturehike пальники</category>
+
+<category id="2623" portal_id="" parentId="2146">Мультипаливні пальники</category>
+
+<category id="2626" portal_id="" parentId="2623">BRS Мультипаливні пальники</category>
+
+<category id="2644" portal_id="" parentId="1916">Civivi ножі</category>
+
+<category id="2650" portal_id="" parentId="2079">Only Hot грілки</category>
+
+<category id="2685" portal_id="" parentId="2315">Ножі Firebird 8а серія</category>
+
+<category id="2698" portal_id="" parentId="1916">Sencut ножі</category>
+
+<category id="2699" portal_id="" parentId="1916">Weknife ножі</category>
+
+<category id="2702" portal_id="" parentId="2227">Naturehike іграшки</category>
+
+<category id="2703" portal_id="" parentId="2154">Naturehike обігрівачі</category>
+
+<category id="2705" portal_id="" parentId="2282">IceBox акумулятори холоду</category>
+
+<category id="2708" portal_id="" parentId="2079">Naturehike контейнери</category>
+
+<category id="2711" portal_id="" parentId="1941">Кухонні точила</category>
+
+<category id="2718" portal_id="" parentId="2140">Naturehike взуття</category>
+
+<category id="2720" portal_id="" parentId="2079">Naturehike візочки</category>
+
+<category id="2761" portal_id="" parentId="2482">Одномісні</category>
+
+<category id="2762" portal_id="" parentId="2482">Двомісні</category>
+
+<category id="2763" portal_id="" parentId="2482">Тримісні</category>
+
+<category id="2764" portal_id="" parentId="2482">Аксесуари</category>
+
+<category id="2765" portal_id="" parentId="2482">Чотиримісні</category>
+
+<category id="2766" portal_id="" parentId="2488">Аксесуари</category>
+
+<category id="2767" portal_id="" parentId="2488">Всесезонні</category>
+
+<category id="2768" portal_id="" parentId="2488">Зимові</category>
+
+<category id="2769" portal_id="" parentId="2488">Літні</category>
+
+<category id="2770" portal_id="" parentId="2079">Naturehike тенти</category>
+
+<category id="2771" portal_id="" parentId="2770">Аксесуари</category>
+
+<category id="2772" portal_id="" parentId="2079">Naturehike килимки</category>
+
+<category id="2773" portal_id="" parentId="2772">Аксесуари</category>
+
+<category id="2774" portal_id="" parentId="2772">Каремати</category>
+
+<category id="2775" portal_id="" parentId="2772">Кемпінгові</category>
+
+<category id="2776" portal_id="" parentId="2772">Ковдри</category>
+
+<category id="2777" portal_id="" parentId="2772">Надувні</category>
+
+<category id="2778" portal_id="" parentId="2772">Самонадувні</category>
+
+<category id="2779" portal_id="" parentId="2079">Naturehike подушки</category>
+
+<category id="2780" portal_id="" parentId="2481">Надувні меблі</category>
+
+<category id="2781" portal_id="" parentId="2481">Складані ліжка</category>
+
+<category id="2782" portal_id="" parentId="2481">Стільці та крісла</category>
+
+<category id="2783" portal_id="" parentId="2481">Столи</category>
+
+<category id="2784" portal_id="" parentId="2480">Кемпінгові</category>
+
+<category id="2785" portal_id="" parentId="2480">Налобні</category>
+
+<category id="2786" portal_id="" parentId="2531">Naturehike аксесуари</category>
+
+<category id="2787" portal_id="" parentId="2531">Naturehike верхній одяг</category>
+
+<category id="2788" portal_id="" parentId="2531">Naturehike кепки та панами</category>
+
+<category id="2789" portal_id="" parentId="2531">Naturehike пов'язки</category>
+
+<category id="2790" portal_id="" parentId="2531">Naturehike термобілизна чоловіча</category>
+
+<category id="2791" portal_id="" parentId="2531">Naturehike шапки</category>
+
+<category id="2792" portal_id="" parentId="2531">Naturehike шкарпетки</category>
+
+<category id="2793" portal_id="" parentId="2531">Naturehike штани</category>
+
+<category id="2794" portal_id="" parentId="2577">Аксесуари</category>
+
+<category id="2795" portal_id="" parentId="2577">Газові</category>
+
+<category id="2796" portal_id="" parentId="2577">Дров'яні</category>
+
+<category id="2797" portal_id="" parentId="2483">Аксесуари</category>
+
+<category id="2798" portal_id="" parentId="2483">Казанки, сковорідки, миски, чайники</category>
+
+<category id="2799" portal_id="" parentId="2483">Набори</category>
+
+<category id="2800" portal_id="" parentId="2483">Тарілки</category>
+
+<category id="2801" portal_id="" parentId="2483">Термоси</category>
+
+<category id="2802" portal_id="" parentId="2483">Титановий посуд</category>
+
+<category id="2803" portal_id="" parentId="2483">Чашки</category>
+
+<category id="2804" portal_id="" parentId="2079">Naturehike аксесуари</category>
+
+<category id="2805" portal_id="" parentId="2079">Naturehike взуття</category>
+
+<category id="2806" portal_id="" parentId="2079">Naturehike відра</category>
+
+<category id="2807" portal_id="" parentId="2079">Naturehike водний спорт</category>
+
+<category id="2808" portal_id="" parentId="2079">Naturehike водонепроникні речі</category>
+
+<category id="2809" portal_id="" parentId="2808">Гермомішки</category>
+
+<category id="2810" portal_id="" parentId="2808">Дощовики</category>
+
+<category id="2811" portal_id="" parentId="2808">Рукавички</category>
+
+<category id="2812" portal_id="" parentId="2808">Рюкзаки</category>
+
+<category id="2813" portal_id="" parentId="2808">Сумки</category>
+
+<category id="2814" portal_id="" parentId="2808">Чохли</category>
+
+<category id="2815" portal_id="" parentId="2079">Naturehike душ</category>
+
+<category id="2816" portal_id="" parentId="2079">Naturehike каністри</category>
+
+<category id="2817" portal_id="" parentId="2079">Naturehike карабіни</category>
+
+<category id="2818" portal_id="" parentId="2079">Naturehike органайзери</category>
+
+<category id="2819" portal_id="" parentId="2079">Naturehike питні системи</category>
+
+<category id="2820" portal_id="" parentId="2079">Naturehike рушники</category>
+
+<category id="2821" portal_id="" parentId="2079">Naturehike рюкзаки</category>
+
+<category id="2822" portal_id="" parentId="2079">Naturehike сумки</category>
+
+<category id="2823" portal_id="" parentId="2079">Naturehike трекінгові палиці</category>
+
+<category id="2824" portal_id="" parentId="2079">Naturehike фрісбі</category>
+
+<category id="2825" portal_id="" parentId="2079">Naturehike холодильники</category>
+
+		</categories>
+		<offers>
+			<offer id="44135" available="false">
+<url>https://atlantmarket.com.ua/likhtar-ruchniy-fenix-e35-ue-cree-xm-l2-u2/</url>
+<price>1640</price>
+<currencyId>UAH</currencyId>
+<barcode>E35UE2016</barcode>
+
+<categoryId>2177</categoryId>
+<picture>https://atlantmarket.com.ua/upload/iblock/9eb/12301.jpg</picture>
+<picture>https://atlantmarket.com.ua/upload/iblock/3eb/12302.jpg</picture>
+<picture>https://atlantmarket.com.ua/upload/iblock/9d5/12303.jpg</picture>
+<picture>https://atlantmarket.com.ua/upload/iblock/048/12304.jpg</picture>
+<name>Ліхтар ручний Fenix E35 UE Cree XM-L2 U2</name>
+<description><![CDATA[<p style="text-align: center;">
+ <img alt="Фонари Fenix" src="https://atlantmarket.com.ua/upload/medialibrary/272/Fenix_logo.png" title="Fenix" style="border: medium none;" rel="border: none;">
+</p>
+<table class="prop-table" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr class="header">
+<td colspan="8">
+ Ліхтар Fenix E35UE (2016) Cree XM-L 2 U2 
+ </td>
+</tr>
+<tr class="modes">
+<td class="left-header">
+ ANSI 
+ </td>
+<td>
+ Турбо 
+ </td>
+<td>
+ Максимальний 
+ </td>
+<td>
+ Середній 
+ </td>
+<td>
+ Мінімальний 
+ </td>
+<td>
+ ECO 
+ </td>
+<td>
+ Стробоскоп 
+ </td>
+<td class="left">
+ SOS 
+ </td>
+</tr>
+<tr class="mode">
+<td class="left-header">
+ Яскравість 
+ </td>
+<td class="left">
+ 1000 люмен 
+ </td>
+<td class="left">
+ 450 люмен 
+ </td>
+<td class="left">
+ 150 люмен 
+ </td>
+<td class="left">
+ 50 люмен 
+ </td>
+<td class="left">
+ 8 люмен 
+ </td>
+<td class="left">
+ 1000 люмен 
+ </td>
+<td class="left">
+ 150 люмен 
+ </td>
+</tr>
+<tr class="mode">
+<td class="left-header">
+ Час роботи 
+ </td>
+<td class="left">
+ 1 годину 50 хвилин 
+ </td>
+<td class="left">
+ 4 години 
+ </td>
+<td class="left">
+ 11 годин 50 хвилин 
+ </td>
+<td class="left">
+ 42 години 30 хвилин 
+ </td>
+<td class="left">
+ 150 годин 
+ </td>
+<td class="left">
+ - 
+ </td>
+<td class="left">
+ - 
+ </td>
+</tr>
+<tr class="mode">
+<td class="left-header">
+ Дистанція 
+ </td>
+<td colspan="7" class="left">
+ 160 м 
+ </td>
+</tr>
+<tr class="mode">
+<td class="left-header">
+ Ударостійкість 
+ </td>
+<td colspan="7" class="left">
+ 1 м 
+ </td>
+</tr>
+<tr class="mode">
+<td class="left-header">
+ Водонепроникність 
+ </td>
+<td colspan="7" class="left">
+ IPX8, до 2-х метрів 
+ </td>
+</tr>
+<tr class="mode">
+<td class="left-header">
+ Розміри 
+ </td>
+<td colspan="7" class="left">
+ 122 мм (довжина) 24 мм (діаметр) 
+ </td>
+</tr>
+<tr class="mode">
+<td class="left-header">
+ Вага 
+ </td>
+<td colspan="7" class="left">
+ 72 г (без елементів живлення) 
+ </td>
+</tr>
+<tr class="mode">
+<td class="left-header">
+ Комплектація 
+ </td>
+<td colspan="7" class="left">
+ Ліхтар, ремінець на руку, ущільнююче кільце, інструкція, гарантія. 
+ </td>
+</tr>
+<tr class="mode">
+<td class="left-header" style="border-top: none;">
+ Елементи живлення 
+ </td>
+<td colspan="3" class="left" style="border-top: none;">
+ 18650 
+ </td>
+<td class="left-header" style="border-top: none;">
+ Тип відбивача 
+ </td>
+<td colspan="3" class="left" style="border-top: none;">
+ Гладкий 
+ </td>
+</tr>
+<tr class="mode" valign="middle">
+<td class="left-header">
+ Матеріал корпусу 
+ </td>
+<td colspan="3" class="left">
+ Авіаційний алюміній 
+ </td>
+<td class="left-header">
+ Тип оптичної системи 
+ </td>
+<td colspan="3" class="left">
+ Відбивач 
+ </td>
+</tr>
+<tr class="mode" valign="middle">
+<td class="left-header">
+ Покриття корпусу 
+ </td>
+<td colspan="3" class="left">
+ Анодування III ступеня 
+ </td>
+<td class="left-header">
+ Упаковка 
+ </td>
+<td colspan="3" class="left">
+ Картонна подарункова коробка 
+ </td>
+</tr>
+<tr class="mode" valign="middle">
+<td class="left-header">
+ Включення 
+ </td>
+<td colspan="3" class="left">
+ Кнопка на корпусі 
+ </td>
+<td class="left-header">
+ Перемикання режимів 
+ </td>
+<td colspan="3" class="left">
+ Кнопкою на корпусі 
+ </td>
+</tr>
+</tbody>
+</table>
+<h2 style="background-color: initial;">Опис Fenix E35UE (2016) Cree XM-L 2 U2: </h2>
+<p>
+ Модель Fenix E35UE 2016 може використовуватися в разнообразныхх ситуаціях, адже цей ліхтар має великий наборів режимів з різною яскравістю, а також, що використовуються для подачі сигналів. Діапазон яскравості становить для нього 8-1000 люмен. Основою оптичної системи виступає світлодіод XM-L 2 U2 від одного з найбільш відомих виробників подібної продукції — компанії Cree. Його перевага становить не тільки яскравість, а й довговічність. Кожен такий діод в змозі забезпечувати освітлення протягом 50 000 годин. Нижче вказані характеристики роботи E35UE 2016 в кожному режимі з урахуванням того, що він працює на одному фірмовому акумулятор 18650 виробництва Fenix, який вміщує 3400 маг заряду. 
+</p>
+<ul>
+<li>Turbo – найбільш потужний світло на 1000 люмен підтримується протягом 1 години 50 хвилин;</li>
+<li>High – ліхтарик світить з яскравістю 450 люмен і працює протягом 4 годин;</li>
+<li>Mid – освітлення на рівні 150 люмен протягом 11 годин 50 хвилин;</li>
+<li>Low – яскравість променя 50 люмен і тривалість роботи 42 з половиною години;</li>
+<li>Eco – освітлення яскравістю 8 люмен при можливості працювати 150 годин;</li>
+<li>Strobe – інтенсивний сигнальний режим на 1000 люмен яскравості;</li>
+<li>SOS – миготливий світло для подачі сигналів з яскравістю 150 люмен.</li>
+</ul>
+<p>
+ Крім вже зазначених акумулятора 18650, E35UE 2016 в змозі використовувати літієві батарейки іншого популярного формату CR123A. Їх у кожному комплекті має бути дві. При їх установці, користувачі повинні враховувати полярність, однак від переполюсовки ліхтар повністю захищений. Також в E35UE 2016 інтегровані механізми запобігання переразрядки акумулятора, система інтелектуальної пам'яті і драйвер постійної яскравості. 
+</p>
+<p>
+ Ліхтар легко управляється двома кнопками з гумовими накладками, винесеними ближче до головної частини. Вони блокуються в тому випадку, якщо необхідно запобігти випадкове включення ліхтаря. Також зручно, що E35UE 2016 сумісний з багатьма фірмовими аксесуарами, які розширюють функціональність ліхтаря, наприклад, фільтрами і кріпленнями на велосипедний кермо. 
+</p>
+<p>
+ Модель E35UE 2016 можна використовувати в ролі похідного ліхтаря, незважаючи на погану погоду. Його корпус — герметичний і абсолютно не пропускає воду всередину. Зроблений з алюмінію, на поверхню якого нанесений шар анодування і накатка, яка не дає ліхтаря случчайно вислизнути з рук. 
+</p>
+<h3>Особливості:</h3>
+<ul>
+<li>1000 люмен яскравості портативного освітлення;</li>
+<li>надійний світлодіод XM-L 2 U2 від бренду Cree;</li>
+<li>сім режимів роботи;</li>
+<li>використання одного стандартного акумулятора 18650;</li>
+<li>можливість встановити батарейки CR123A;</li>
+<li>захист від замикання і переполюсовки батарейок;</li>
+<li>корпус з сплаву на базі алюмінію;</li>
+<li>антиковзка накатка на корпусі;</li>
+<li>високий рівень захисту від високої вологості;</li>
+<li>дальність освітлення — 160 метрів.</li>
+</ul>
+ <strong><br>
+ Гарантія: </strong>60 місяців надається гарантія до кожного ліхтаря моделі Fenix E35UE 2016. 
+<p style="text-align: center">
+ <a href="/manuals/Fenix_E35UE_CREE_XM-L2_U2.pdf" class="button19" target="_blank">Завантажити інструкцію</a>
+</p>]]></description>
+<vendor>Fenix</vendor>
+<param name="Вес">72 г</param>
+<param name="Водонепроницаемость">IPX-8</param>
+<param name="Дальность м.">160 м</param>
+<param name="Диаметр">24 мм</param>
+<param name="Длина">122 мм</param>
+<param name="Элементы питания">18650</param>
+<param name="Цвет светодиода">білий / жовтий</param>
+<param name="Режимы работы">5</param>
+<param name="Светодиод">Cree XM-L2 U2</param>
+<param name="Тип">кишеньковий</param>
+</offer>
+<offer id="44136" available="true">
+<url>https://atlantmarket.com.ua/multitul-multi-tool-ganzo-g203/</url>
+<price>890</price>
+<currencyId>UAH</currencyId>
+<barcode>G203</barcode>
+
+<categoryId>1906</categoryId>
+<picture>https://atlantmarket.com.ua/upload/iblock/606/52752.jpg</picture>
+<picture>https://atlantmarket.com.ua/upload/iblock/21a/52752.jpg</picture>
+<picture>https://atlantmarket.com.ua/upload/iblock/067/2.jpg</picture>
+<picture>https://atlantmarket.com.ua/upload/iblock/d67/3.jpg</picture>
+<picture>https://atlantmarket.com.ua/upload/iblock/434/4.jpg</picture>
+<picture>https://atlantmarket.com.ua/upload/iblock/105/5.jpg</picture>
+<picture>https://atlantmarket.com.ua/upload/iblock/09a/6.jpg</picture>
+<picture>https://atlantmarket.com.ua/upload/iblock/184/7.jpg</picture>
+<picture>https://atlantmarket.com.ua/upload/iblock/3aa/8.jpg</picture>
+<picture>https://atlantmarket.com.ua/upload/iblock/99c/9.jpg</picture>
+<picture>https://atlantmarket.com.ua/upload/iblock/a67/tql7letbwpwft1h3az20k0u1a2qahn72/ganzo g203.jpg</picture>
+<picture>https://atlantmarket.com.ua/upload/iblock/1ec/ed2dsk2ro9wqyylvdfof8sftexdpjx6i/ganzo g203_1.jpg</picture>
+<picture>https://atlantmarket.com.ua/upload/iblock/7ea/b38gmeewq4zckspvev3h8m3ll5tdnfcf/ganzo g203_2.jpg</picture>
+<picture>https://atlantmarket.com.ua/upload/iblock/d02/tcgib00h202f4le2c46jf06mdehg4qap/g203-ua-1.jpg</picture>
+<picture>https://atlantmarket.com.ua/upload/iblock/8cd/ds73j67ffq80qn9zqdkfzv29h9q39ab7/g203-ua-2.jpg</picture>
+<picture>https://atlantmarket.com.ua/upload/iblock/958/o4ah42g7h1sw490rzn6ojdsvxj2ds1pm/g203-ua-3.jpg</picture>
+<name>Мультитул Multi Tool Ganzo G203</name>
+<description><![CDATA[<p style="text-align: center;">
+ <img alt="Ножи Ganzo" src="https://atlantmarket.com.ua/upload/medialibrary/f94/logo_ganzo.png" title="Ganzo">
+</p>
+<h2>Опис Мультитула Ganzo G203:</h2>
+<p>
+ Модель Ganzo G203 представляє з себе повноцінні плоскогубці з потужними кусачками і можливістю щільного захоплення круглих предметів, а також цілим комплектом додаткових інструментів всередині рукояток. В якості матеріалу для мультитула цій моделі використовується сталь 440С. Вона відноситься до розряду нержавіючих сплавів з хорошими показниками твердості. Всі елементи мультитула вкриті додатковим шаром чорної порошкової фарби, яка також захищає метал від корозії. Це сучасна і дуже стійке покриття, яке не стирається в процесі використання інструментів. А матовий чорний мультитул виглядає дійсно стильно і дуже презентабельно. З додаткових інструментів, в моделі Ganzo G203 присутні пила, серрейторный і звичайний ніж, мініатюрні ножиці, відкривачка, шило, маленькі ножиці, тримач для змінних біт. Всі змінні насадки для викруток зберігаються в одному загальному органайзері і закріплюються на тримачі за допомогою магнітного перехідника. Мультитул разом з бітами зберігається в щільному чохлі з нейлону, який закривається на кнопку, легко стирається в разі необхідності, швидко висихає, якщо намокне.
+</p>
+<p>
+<strong>Особливості:</strong>
+</p>
+<ul>
+<li>повнорозмірні плоскогубці; </li>
+<li>є функція кусачок; </li>
+<li>загальна кількість інструментів — 24; </li>
+<li>використовується сталь 440С; </li>
+<li>мультитул переважати 217 грам; </li>
+<li>розмір складеного інструменту — 10,5 см; </li>
+<li>комплект змінних біт з магнітним утримувачем; </li>
+<li>зручний нейлоновий чохол.</li>
+</ul>
+<p>
+<strong>Гарантія:</strong> Виробники дають покупцям моделі Ganzo G203 гарантію на один рік.
+</p>]]></description>
+<warranty>1 рік</warranty>
+<vendor>Ganzo</vendor>
+<param name="Вес">217 г</param>
+<param name="Гарантия">1 рік</param>
+<param name="Количество функций">пила, серрейторний і звичайний ніж, мініатюрні ножиці, відкривачка, шило, маленькі ножиці, тримач для змінних біт</param>
+<param name="Цвет мультитула">синій , блакитний</param>
+<param name="Размер в раскрытом состоянии">165 мм</param>
+<param name="Размер в сложенном состоянии">105 мм</param>
+<param name="Тип мультитула">повнорозмірний</param>
+<param name="Чехол / ножны">Є</param>
+</offer>
+<offer id="70740" available="false">
+<url>https://atlantmarket.com.ua/stilets-skladaniy-naturehike-stellaluna-l04-cnk2450jj015-rozmir-m-alyuminiy-chorniy/</url>
+<price>2000</price>
+<currencyId>UAH</currencyId>
+<barcode>6976023929410</barcode>
+
+<categoryId>2782</categoryId>
+<picture>https://atlantmarket.com.ua/upload/iblock/ee7/lxczhm71nr2zb47gnpvm0a5bcth1atkt/363014.970.jpg</picture>
+<picture>https://atlantmarket.com.ua/upload/iblock/90c/95thn2wno6x4tf5a7l2ksbl8pp832kdb/363015.970.jpg</picture>
+<picture>https://atlantmarket.com.ua/upload/iblock/ce2/1avjo84g135c9c5ed4doncpwe2urs9m9/363016.970.jpg</picture>
+<picture>https://atlantmarket.com.ua/upload/iblock/afe/0mfff78xcyg6wsi4lm95w8z6k8yh2twh/363017.970.jpg</picture>
+<picture>https://atlantmarket.com.ua/upload/iblock/eb4/dt4ffsyou0yjrda7e1pveu569htoh1mj/363018.970.jpg</picture>
+<picture>https://atlantmarket.com.ua/upload/iblock/90a/6uoh5llrh5ri5x6yz1nftktrox3zl0k9/363019.970.jpg</picture>
+<picture>https://atlantmarket.com.ua/upload/iblock/39f/ai832o6w726iub5m2vq8pp0mcliev4e2/363020.970.jpg</picture>
+<picture>https://atlantmarket.com.ua/upload/iblock/3b9/ftj776iqv0w5q4xssg8v0prioxij3at0/363021.970.jpg</picture>
+<name>Стілець складаний Naturehike Stellaluna L04 CNK2450JJ015, розмір M, алюміній, чорний</name>
+<description><![CDATA[<h2>Опис складаного стільця Naturehike Stellaluna L04 CNK2450JJ015, чорного:</h2>
+
+<p>Ви їздите на риболовлю чи на дачу у вихідні? Плануєте пікнік чи туристичну подорож разом із друзями та родиною? Навіть вдалині від дому не можна забувати про комфорт, і стілець Naturehike Stellaluna L04 готовий про нього подбати, куди б ви не прямували.</p>
+
+<p>Модель має складану конструкцію, розроблену спеціально для експлуатації на природі з упором на зручне використання та тривалий термін служби:</p>
+
+<ul> 
+
+<li><strong>Каркас із алюмінію 7075.</strong> Конструкція витримує навантаження до 150 кг і не піддається корозії навіть під час використання у вологу погоду. До того ж алюміній має надлегку вагу, знижуючи вагу стільця до 1,1 кг.</li> 
+
+<li><strong>Сидіння та спинка з тканини Оксфорд 600D Ripstop із сітчастими вставками. </strong>Матеріал високої щільності не рветься та не розтягується під час тривалої експлуатації. Ще одна перевага тканини — здатність відштовхувати краплі води та забруднення. Вставки з сітки з обох боків покращують якість циркуляції повітря в області спини.</li> 
+
+<li><strong>Стійкість на будь-якій поверхні.</strong> Ніжки доповнені нековзними накладками, які забезпечують стабільність і стійкість конструкції у разі встановлення на кам'янистому або хисткому ґрунті.</li> 
+
+</ul>
+
+<p>Встановлення стільця займає менше хвилини. У розкладеному положенні його розміри сягають 68 х 50 х 56 см, надаючи достатньо місця, щоб сидіти в комфортній позі.</p>
+
+<p>Модель поставляється у фірмовому чохлі, який застібається на блискавку та доповнений ручкою для носіння. Розміри чохла становлять 37 х 12 см.</p>
+
+<p><strong>Характеристики:</strong></p>
+
+<ul> 
+
+<li>складаний стілець для відпочинку на природі, туризму, риболовлі;</li> 
+
+<li>колір – чорний;</li> 
+
+<li>max навантаження – 150 кг;</li> 
+
+<li>каркас із алюмінію 7075;</li> 
+
+<li>сидіння та спинка з тканини Оксфорд 600D Ripstop;</li> 
+
+<li>є сітчасті вставки у спинці для вільної циркуляції повітря;</li> 
+
+<li>накладки на ніжках для надійного встановлення на будь-якій поверхні;</li> 
+
+<li>розміри у розкладеному положенні – 68 х 50 х 56 см;</li> 
+
+<li>розміри у складеному вигляді – 37 х 12 см;</li> 
+
+<li>вага – 1,1 кг;</li> 
+
+<li>чохол для зберігання є у наборі.</li> 
+
+</ul>]]></description>
+<warranty>12 місяців</warranty>
+<vendor>Naturehike</vendor>
+<param name="Вес">1.1 кг</param>
+<param name="Гарантия">12 місяців</param>
+<param name="Материал">Оксфорд 600D Ripstop, алюміній 7075</param>
+<param name="Размер">68 х 50 х 56 см</param>
+<param name="Размер в сложенном состоянии">37 х 12 см</param>
+<param name="Тип">Стільці</param>
+<param name="Тип товара">Товари для туризму</param>
+</offer>
+
+		</offers>
+	</shop>
+</yml_catalog>

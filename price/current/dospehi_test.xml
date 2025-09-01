@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE yml_catalog
+SYSTEM "shops.dtd">
+<yml_catalog date="2025-09-01 03:44">
+ <shop>
+  <currencies>
+   <currency id="UAH" rate="1"/>
+  </currencies>
+  <categories>
+   <category id="1174">Очки</category>
+   <category id="1260" parentId="1174">Очки защитные открытые</category>
+   <category id="1261" parentId="1174">Очки защитные с уплотнителем</category>
+   <category id="1262" parentId="1174">Очки защитные со сменными линзами</category>
+   <category id="1263" parentId="1174">Очки защитные фотохромные</category>
+   <category id="1264" parentId="1174">Очки поляризационные</category>
+   <category id="1265" parentId="1174">Очки поляризационные защитные 2в1</category>
+   <category id="1266" parentId="1174">Антифары</category>
+   <category id="1267" parentId="1174">Диоптрические (очки, оправы, вставки, накладки)</category>
+   <category id="1268" parentId="1267">Бифокальные очки</category>
+   <category id="1269" parentId="1268">Бифокальные защитные очки</category>
+   <category id="1270" parentId="1268">Бифокальные поляризационные очки</category>
+   <category id="1271" parentId="1268">Бифокальные поляризационные защитные очки 3в1</category>
+   <category id="1272" parentId="1268">Бифокальные фотохромные защитные очки</category>
+   <category id="1273" parentId="1267">Спортивные оправы под диоптрии</category>
+   <category id="1274" parentId="1267">Диоптрические вставки для очков</category>
+   <category id="1275" parentId="1267">Поляризационные накладки на очки</category>
+   <category id="1297">SALE</category>
+   <category id="1279">Оптовые подборки для магазинов</category>
+   <category id="1281" parentId="1279">Для военторгов и оружейных магазинов</category>
+   <category id="1292" parentId="1279">Для веломагазинов</category>
+   <category id="1282" parentId="1279">Для магазинов рыбалки</category>
+   <category id="1283" parentId="1279">Для магазинов мотоэкипировки</category>
+   <category id="1284" parentId="1279">Для магазинов спорттоваров</category>
+   <category id="1285" parentId="1279">Для магазинов туристического снаряжения</category>
+   <category id="1286" parentId="1279">Для магазинов солнцезащитных очков</category>
+   <category id="1287" parentId="1279">Для салонов оптики</category>
+   <category id="1280">Оптовые подборки для предприятий</category>
+   <category id="1288" parentId="1280">Для предприятий оборонного сектора</category>
+   <category id="1289" parentId="1280">Для промышленных предприятий</category>
+   <category id="1290" parentId="1280">Для предприятий медицинской сферы</category>
+   <category id="1295">Защита слуха</category>
+   <category id="1302">Перчатки</category>
+   <category id="1176">Аксессуары для очков</category>
+   <category id="1299" parentId="1176">Средства для ухода за очками</category>
+   <category id="1300" parentId="1176">Ремешки и крепления для очков</category>
+   <category id="1301" parentId="1176">Футляры, чехлы и мешочки для очков</category>
+   <category id="1291">Другие товары</category>
+   <category id="1296" parentId="1291">Аксессуары для охлаждения и защита от солнца</category>
+   <category id="1259" parentId="1291">Торговое оборудование</category>
+  </categories>
+  <offers>
+   <offer id="1125" group_id="24449" available="true">
+    <url>https://www.uabest.com.ua/ochki-zashchitnye-otkrytye-pyramex-alair-amber-zheltye/</url>
+    <price>170</price>
+    <currencyId>UAH</currencyId>
+    <categoryId>1260</categoryId>
+    <picture>https://www.uabest.com.ua/content/images/26/75654823461646_+d13bb117d8.jpeg</picture>
+    <picture>https://www.uabest.com.ua/content/images/26/29693608443933_+050e16a1de.jpeg</picture>
+    <picture>https://www.uabest.com.ua/content/images/26/27948661313191_+0cebb6884a.jpeg</picture>
+    <picture>https://www.uabest.com.ua/content/images/26/21340631423090_+c74510bdc7.jpeg</picture>
+    <picture>https://www.uabest.com.ua/content/images/26/68441203158595_+0cfa19a03f.jpeg</picture>
+    <picture>https://www.uabest.com.ua/content/images/26/44135468791455_+3e3cf48e09.jpeg</picture>
+    <vendorCode>2АЛАИ-33</vendorCode>
+    <vendor>Pyramex</vendor>
+    <name><![CDATA[Очки защитные открытые Pyramex Alair (amber) желтые]]></name>
+    <description><![CDATA[<p 20.8px="" style="line-height:"><strong 20.8px="" style="line-height:"><em><span style="color:">Недорогие, но качественные защитные очки</span></em></strong></p>    <h4 style="font-family:"><span style="color:"><span 0px="" style="margin:">Защитные очки</span><strong><span 0px="" style="margin:"> Alair от Pyramex </span></strong><em><span 0px="" style="margin:">(США)</span></em></span></h4>    <p 20.8px="" style="line-height:"><em><strong><span 0px="" style="margin:">Характеристики:</span></strong></em></p>    <ul 20.7999992370605px="" style="line-height:">   <li 0px="" style="margin:"><strong>цвет линз - жёлтый;</strong></li>   <li 0px="" style="margin:">видимый свет - 89%;</li>   <li 0px="" style="margin:">материал линз - поликарбонат <em 20.8px="" style="line-height:"><span 10pt="" style="font-size:">(Meets ANSI Z87.1-2010 Standards for use in Industrial Applications</span><span 10pt="" style="font-size:">)</span><span 10pt="" style="font-size:">;</span></em></li>   <li 0px="" style="margin:">светофильтр UV400 <em>(максимальная защита от ультрафиолета); </em></li>   <li 0px="" style="margin:"><span 20.7999992370605px="" style="line-height:">защита от царапин</span><em 20.7999992370605px="" style="line-height:"> (специальное покрытие на линзах, продлевающее срок их эксплуатации);</em></li>   <li 0px="" style="margin:">прямые дужки.</li>  </ul>    <p 0px="" style="margin-right:"><span 0px="" style="margin:"><span style="text-decoration:" underline="">Соответствие международным стандартам безопасности</span>:</span></p>    <ul 0px="" 8px="" style="margin:">   <li 0px="" style="margin-top:"><em><span style="color:"><strong>Exceeds ANSI Z87.1 High Impact Requirements</strong></span></em></li>   <li 0px="" style="margin-top:"><em><span style="color:"><strong>CAN/CSA Z94.3-07</strong></span></em></li>   <li 0px="" style="margin-top:"><em><span style="color:"><strong>CE EN166 Certified</strong></span></em></li>  </ul>    <p style="margin:"><span style="text-decoration:" underline=""><em><strong><span style="color:">Параметры:</span></strong></em></span></p>    <table 297px="" border="0" style="margin:;width:">   <tbody>    <tr>     <td><span style="color:"><span 12pt="" style="font-size:">Толщина линзы</span></span></td>     <td><span style="color:"><span 12pt="" style="font-size:">2,45 мм</span></span></td>    </tr>    <tr>     <td><span style="color:"><span 12pt="" style="font-size:">Размер оправы</span></span></td>     <td><span style="color:"><span 12pt="" style="font-size:">134 мм</span></span></td>    </tr>    <tr>     <td>     <p><span style="color:"><span 12pt="" style="font-size:">Размер линзы</span></span></p>       <p><span style="color:"><span 12pt="" style="font-size:">(диагональ/вертикаль)</span></span></p>     </td>     <td><span style="color:"><span 16px="" style="font-size:">73 x 42 мм</span></span></td>    </tr>    <tr>     <td><span style="color:"><span 12pt="" style="font-size:">Ширина моста</span></span></td>     <td><span style="color:"><span 12pt="" style="font-size:">12 мм</span></span></td>    </tr>   </tbody>  </table>  ]]></description>
+    <param name="Гарантия">1 мес.</param>
+    <param name="Степень затемнения">Светлые</param>
+    <param name="Зеркальное покрытие">Без зеркального покрытия</param>
+    <param name="Цвет линз">Желтый</param>
+    <param name="Защита от ультрафиолета">UV400</param>
+    <param name="Наличие уплотнителя">Без уплотнителя</param>
+    <param name="Тип оправы">Без оправы</param>
+    <param name="Повышенная ударопрочность">Ударопрочный поликарбонат|Промышленные стандарты (ANSI Z87.1)</param>
+    <param name="Защита от царапин">Упрочняющее покрытие</param>
+   </offer>
+   <offer id="1128" group_id="27449" available="true">
+    <url>https://www.uabest.com.ua/ochki-zashchitnye-otkrytye-pyramex-alair-gray-serye/</url>
+    <price>170</price>
+    <currencyId>UAH</currencyId>
+    <categoryId>1260</categoryId>
+    <picture>https://www.uabest.com.ua/content/images/29/33892264997333_+14f94f0f97.jpeg</picture>
+    <picture>https://www.uabest.com.ua/content/images/29/77064282585762_+a527b296c3.jpeg</picture>
+    <picture>https://www.uabest.com.ua/content/images/29/29134894484097_+6a13bd1233.jpeg</picture>
+    <picture>https://www.uabest.com.ua/content/images/29/56807147534014_+d033b77fc9.jpeg</picture>
+    <picture>https://www.uabest.com.ua/content/images/29/51200487843969_+d1791102cc.jpeg</picture>
+    <picture>https://www.uabest.com.ua/content/images/29/66779544262328_+d3ae43f260.jpeg</picture>
+    <vendorCode>2АЛАИ-22</vendorCode>
+    <vendor>Pyramex</vendor>
+    <name><![CDATA[Очки защитные открытые Pyramex Alair (gray) серые]]></name>
+    <description><![CDATA[<p 20.8px="" style="line-height:"><strong 20.8px="" style="line-height:"><em><span style="color:">Недорогие, но качественные защитные очки</span></em></strong></p>    <h4 style="font-family:"><span style="color:"><span 0px="" style="margin:">Защитные очки</span><strong><span 0px="" style="margin:"> Alair от Pyramex </span></strong><em><span 0px="" style="margin:">(США)</span></em></span></h4>    <p center="" style="text-align:"><span 14pt="" style="font-size:"><span -18pt="" lang="EN-US" style="text-indent:">[</span><span -18pt="" lang="RU" style="text-indent:">элэ йр</span><span -18pt="" lang="EN-US" style="text-indent:">]</span><span 20.8px="" style="line-height:"><span 20.8px="" style="line-height:"> </span></span></span></p>    <p 20.8px="" style="line-height:"><em><strong><span 0px="" style="margin:">Характеристики:</span></strong></em></p>    <ul 20.7999992370605px="" style="line-height:">   <li 0px="" style="margin:"><strong>цвет линз - чёрный;</strong></li>   <li 0px="" style="margin:">видимый свет - 23%;</li>   <li 0px="" style="margin:">материал линз - поликарбонат <em 20.8px="" style="line-height:"><span 10pt="" style="font-size:">(Meets ANSI Z87.1-2010 Standards for use in Industrial Applications</span><span 10pt="" style="font-size:">)</span><span 10pt="" style="font-size:">;</span></em></li>   <li 0px="" style="margin:">светофильтр UV400 <em>(максимальная защита от ультрафиолета); </em></li>   <li 0px="" style="margin:"><span 20.7999992370605px="" style="line-height:">защита от царапин</span><em 20.7999992370605px="" style="line-height:"> (специальное покрытие на линзах, продлевающее срок их эксплуатации);</em></li>   <li 0px="" style="margin:">прямые дужки.</li>  </ul>    <p 0px="" style="margin-right:"><span 0px="" style="margin:"><span style="text-decoration:" underline="">Соответствие международным стандартам безопасности</span>:</span></p>    <ul 0px="" 8px="" style="margin:">   <li 0px="" style="margin-top:"><em><span style="color:"><strong>Exceeds ANSI Z87.1 High Impact Requirements</strong></span></em></li>   <li 0px="" style="margin-top:"><em><span style="color:"><strong>CAN/CSA Z94.3-07</strong></span></em></li>   <li 0px="" style="margin-top:"><em><span style="color:"><strong>CE EN166 Certified</strong></span></em></li>   <li 0px="" style="margin:">   <hr /></li>  </ul>    <p style="margin:"><span style="text-decoration:" underline=""><em><strong><span style="color:">Параметры:</span></strong></em></span></p>    <table 297px="" border="0" style="margin:;width:">   <tbody>    <tr>     <td><span style="color:"><span 12pt="" style="font-size:">Толщина линзы</span></span></td>     <td><span style="color:"><span 12pt="" style="font-size:">2,45 мм</span></span></td>    </tr>    <tr>     <td><span style="color:"><span 12pt="" style="font-size:">Размер оправы</span></span></td>     <td><span style="color:"><span 12pt="" style="font-size:">134 мм</span></span></td>    </tr>    <tr>     <td>     <p><span style="color:"><span 12pt="" style="font-size:">Размер линзы</span></span></p>       <p><span style="color:"><span 12pt="" style="font-size:">(диагональ/вертикаль)</span></span></p>     </td>     <td><span style="color:"><span 16px="" style="font-size:">73 x 42 мм</span></span></td>    </tr>    <tr>     <td><span style="color:"><span 12pt="" style="font-size:">Ширина моста</span></span></td>     <td><span style="color:"><span 12pt="" style="font-size:">12 мм</span></span></td>    </tr>   </tbody>  </table>  ]]></description>
+    <param name="Гарантия">1 мес.</param>
+    <param name="Степень затемнения">Темные</param>
+    <param name="Зеркальное покрытие">Без зеркального покрытия</param>
+    <param name="Цвет линз">Серый</param>
+    <param name="Защита от ультрафиолета">UV400</param>
+    <param name="Наличие уплотнителя">Без уплотнителя</param>
+    <param name="Тип оправы">Без оправы</param>
+    <param name="Повышенная ударопрочность">Ударопрочный поликарбонат|Промышленные стандарты (ANSI Z87.1)</param>
+    <param name="Защита от царапин">Упрочняющее покрытие</param>
+   </offer>
+   <offer id="2253" group_id="886449" available="">
+    <url>https://www.uabest.com.ua/fotokhromnye-ochky-s-poliaryzatsyei-polar-eagle-pe8439-c2-photochromic-bronzovye/</url>
+    <price>490</price>
+    <currencyId>UAH</currencyId>
+    <categoryId>1266</categoryId>
+    <picture>https://www.uabest.com.ua/content/images/4/copy_fotokhromnye-ochky-s-poliaryzatsyei-polar-eagle-pe8438-c2-photochromic-bronzovye-66258931510403_+0708a75902.jpg</picture>
+    <vendorCode>POLE8439-C2</vendorCode>
+    <vendor>Polar Eagle</vendor>
+    <name><![CDATA[Фотохромные очки с поляризацией Polar Eagle PE8439-C2 Photochromic, бронзовые]]></name>
+    <description><![CDATA[<p><strong>2 в 1 Поляризационные фотохромные очки</strong></p>    <p><strong>Характеристики:</strong></p>    <ul>   <li><strong>Стандарт UV400</strong> (максимальная защита от ультрафиолета);</li>   <li><strong>Поляризационные линзы</strong> (в народе их часто называют &quot;антибликовыми очками&quot;, но это некорректно, потому что антиблик и поляризация это совершенно разные технологии). Поляризационные линзы частично отфильтровывают ослепляющие блики от горизонтальных поверхностей. Эта функция особенно полезна в очках для водителей, а также в очках для рыбалки, так как&nbsp;картинка становится более четкой и приятной.</li>   <li><strong>Фотохромные линзы</strong> (в народе такие называют &quot;очки хамелеоны&quot;). Линзы этих очков плавно затемняются на улице. Максимальная степень их затемнения и скорость этого процесса зависят от интенсивности воздействия на них ультрафиолетового излучения.</li>  </ul>    <p>&nbsp;</p>    <p><strong>P.S. </strong>Если Вы ищете универсальное решение очков для вождения ночью и днем, то учитывайте, что...</p>    <p>Против яркого солнца лучше иметь более темные очки.</p>    <p>В солнечную погоду в салоне автомобиля ультрафиолетового света может быть недостаточно для затемнения таких линз до комфортного уровня.</p>  ]]></description>
+    <param name="Степень затемнения">Светлые|Темные|Универсальные</param>
+    <param name="Самозатемнение">Фотохромные (хамелеоны)</param>
+    <param name="Зеркальное покрытие">Без зеркального покрытия</param>
+    <param name="Цвет линз">Бронзовий</param>
+    <param name="Защита от ультрафиолета">UV400</param>
+    <param name="Поляризация против бликов">Очки с поляризацией</param>
+    <param name="Наличие уплотнителя">Без уплотнителя</param>
+    <param name="Тип оправы">В оправе</param>
+    <param name="Защита от царапин">Упрочняющее покрытие</param>
+   </offer>
+  </offers>
+ </shop>
+</yml_catalog>

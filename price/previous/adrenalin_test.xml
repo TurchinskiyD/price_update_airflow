@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items>
+	<item>
+		<code>1733</code>
+		<vendorcode>1733</vendorcode>
+		<groupcode>2862</groupcode>
+		<title>AceCamp канистра для воды Jerrycan 10 L</title>
+		<price>550</price>
+		<rrc>550</rrc>
+		<discount>0</discount>
+		<rrcdiscount>550</rrcdiscount>
+		<qty>35</qty>
+		<stock>Y</stock>
+		<brand>AceCamp</brand>
+		<color> </color>
+		<size></size>
+	</item>
+	<item>
+		<code>1734</code>
+		<vendorcode>1734</vendorcode>
+		<groupcode>8495</groupcode>
+		<title>AceCamp канистра для воды Jerrycan 15 L</title>
+		<price>600</price>
+		<rrc>600</rrc>
+		<discount>0</discount>
+		<rrcdiscount>600</rrcdiscount>
+		<qty>31</qty>
+		<stock>Y</stock>
+		<brand>AceCamp</brand>
+		<color> </color>
+		<size></size>
+	</item>
+	<item>
+		<code>988231-72-8</code>
+		<vendorcode>988231-72</vendorcode>
+		<groupcode>16626</groupcode>
+		<title>Ziener велоперчатки Crisander sunset red 8</title>
+		<price>100</price>
+		<rrc>1000</rrc>
+		<discount>0</discount>
+		<rrcdiscount>1000</rrcdiscount>
+		<qty>6</qty>
+		<stock>Y</stock>
+		<brand>Ziener</brand>
+		<color>sunset red</color>
+		<size>8</size>
+	</item>
+</items>
