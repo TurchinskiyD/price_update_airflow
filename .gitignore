@@ -16,3 +16,10 @@ config/*.yml
 price_update.csv
 sale.xlsx
 price_update*.xlsx
+# ігноруємо всі прайси
+price/current/*
+price/previous/*
+
+# але не ігноруємо тестові
+!price/current/*_test.*
+!price/previous/*_test.*
