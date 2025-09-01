@@ -1,12 +1,13 @@
 import xml.etree.ElementTree as ET
 import os
+from processing.path_helper import get_price_file_path
 
 
-def dasmart_file_operation():
+def dasmart_file_operation(file_name ='dasmart.xml'):
 
-
-    base_dir = os.path.dirname(os.path.abspath(__file__))
-    file_path = os.path.join(base_dir, '../price/dasmart.xml')
+    # base_dir = os.path.dirname(os.path.abspath(__file__))
+    # file_path = os.path.join(base_dir, '../price/dasmart.xml')
+    file_path = get_price_file_path(file_name)
 
     tree = ET.parse(file_path)
     root = tree.getroot()

@@ -1,11 +1,12 @@
 import os
-
 import openpyxl
+from processing.path_helper import get_price_file_path
 
 
-def outfit_file_operation():
-    base_dir = os.path.dirname(os.path.abspath(__file__))
-    file_path = os.path.join(base_dir, "../price/outfitter.xlsx")
+def outfit_file_operation(file_name = 'outfitter.xlsx'):
+    # base_dir = os.path.dirname(os.path.abspath(__file__))
+    # file_path = os.path.join(base_dir, "../price/current/outfitter.xlsx")
+    file_path = get_price_file_path(file_name)
 
     # завантажити книгу Excel з файлу
     wb = openpyxl.load_workbook(filename=file_path)

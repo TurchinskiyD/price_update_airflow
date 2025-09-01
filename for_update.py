@@ -4,14 +4,29 @@ import os
 from datetime import datetime
 import pandas as pd
 import requests
+import shutil
 import sys
 sys.path.append("..")
 from config.config import link_list
 
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+PRICE_DIR = os.path.join(CURRENT_DIR, "price")
+CURRENT_FOLDER = os.path.join(PRICE_DIR, "current")
+PREVIOUS_FOLDER = os.path.join(PRICE_DIR, "previous")
+
+# створюємо папки якщо їх ще немає
+os.makedirs(CURRENT_FOLDER, exist_ok=True)
+os.makedirs(PREVIOUS_FOLDER, exist_ok=True)
+
 
 def download_file(url, name):
-    file_path = os.path.join(CURRENT_DIR, "price", name)
+    # file_path = os.path.join(CURRENT_DIR, "price", name)
+    current_file = os.path.join(CURRENT_FOLDER, name)
+    previous_file = os.path.join(PREVIOUS_FOLDER, name)
+
+    # якщо є поточний файл переносимо його в previous
+    if os.path.exists(current_file):
+        shutil.copy2(current_file, previous_file)
 
     # виконати запит GET до сервера та отримати відповідь
     try:
@@ -19,13 +34,20 @@ def download_file(url, name):
         response.raise_for_status()
 
         # зберегти вміст відповіді в файл
-        with open(file_path, 'wb') as file:
+        with open(current_file, 'wb') as file:
             file.write(response.content)
 
-        print(f'Файл {name} було успішно завантажено та перезаписано.')
+        print(f'Файл {name} було успішно завантажено та перезаписано в current.')
 
     except requests.exceptions.RequestException as e:
         print(f'Виникла помилка під час завантаження {name}: {str(e)}')
+
+        # якщо є резервна версія - відновлюємо файл з previous
+        if os.path.exists(previous_file):
+            shutil.copy2(previous_file, current_file)
+            print(f'↩️ Файл {name} відновлено з попередньої версії')
+        else:
+            print(f'❌ Немає попереднього файлу {name}, відновлення неможливе.')
 
 
 
