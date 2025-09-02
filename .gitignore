@@ -15,7 +15,8 @@ config/*.yaml
 config/*.yml
 price_update.csv
 sale.xlsx
-price_update*.xlsx
+data/
+output/
 # ігноруємо всі прайси
 price/current/*
 price/previous/*
