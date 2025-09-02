@@ -26,7 +26,7 @@ def download_file(url, name):
 
     # якщо є поточний файл переносимо його в previous
     if os.path.exists(current_file):
-        shutil.copy2(current_file, previous_file)
+        shutil.copyfile(current_file, previous_file)
 
     # виконати запит GET до сервера та отримати відповідь
     try:
@@ -44,7 +44,7 @@ def download_file(url, name):
 
         # якщо є резервна версія - відновлюємо файл з previous
         if os.path.exists(previous_file):
-            shutil.copy2(previous_file, current_file)
+            shutil.copyfile(previous_file, current_file)
             print(f'↩️ Файл {name} відновлено з попередньої версії')
         else:
             print(f'❌ Немає попереднього файлу {name}, відновлення неможливе.')

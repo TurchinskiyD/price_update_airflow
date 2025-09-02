@@ -1,11 +1,11 @@
 from datetime import datetime, timedelta
-from airflow.models import DAG
+from airflow.models import DAG, Variable
 from airflow.operators.bash import BashOperator
 
 import sys
 sys.path.append("/price_update_airflow")
 
-bash_command="/home/ubuntu/airflow/venv/bin/python /home/ubuntu/airflow-project/price_update_airflow/main.py"
+bash_command = Variable.get("PRICE_UPDATE_COMMAND")
 
 
 default_args = {
