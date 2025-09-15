@@ -9,7 +9,7 @@ def shamb_file_operation(file_name = 'shambala.xls'):
     file_path = get_price_file_path(file_name)
 
     # завантажити книгу Excel з файлу
-    workbook = xlrd.open_workbook(file_path)
+    workbook = xlrd.open_workbook(file_contents=file_path.read())
 
     # отримати активний аркуш
     worksheet = workbook.sheet_by_index(0)

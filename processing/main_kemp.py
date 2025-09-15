@@ -10,7 +10,10 @@ def kemping_file_operation(file_name ='kemping.xls'):
     # file_path = os.path.join(base_dir, "../price/kemping.xls")
     file_path = get_price_file_path(file_name)
 
-    work_book = xlrd.open_workbook(file_path)
+    # content = file_path.read()
+    # print(content[:200])
+
+    work_book = xlrd.open_workbook(file_contents=file_path.read())
 
     # отримати активний аркуш
     work_sheet = work_book.sheet_by_index(0)

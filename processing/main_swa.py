@@ -1,5 +1,4 @@
 import openpyxl
-import os
 from processing.path_helper import get_price_file_path
 
 
