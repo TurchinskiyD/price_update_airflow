@@ -1,53 +1,72 @@
-from processing import main_adr, main_atl, main_dasmart, main_dosp, main_kemp, main_norf, main_outfit, main_shamb, \
-    main_swa, main_trp
-import os
+import boto3
+import botocore
 from datetime import datetime
 import pandas as pd
 import requests
-import shutil
-import sys
-sys.path.append("..")
-from config.config import link_list
+import os
+from config.config import AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, BUCKET_NAME, REGION_NAME
 
-CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
-PRICE_DIR = os.path.join(CURRENT_DIR, "price")
-CURRENT_FOLDER = os.path.join(PRICE_DIR, "current")
-PREVIOUS_FOLDER = os.path.join(PRICE_DIR, "previous")
-
-# створюємо папки якщо їх ще немає
-os.makedirs(CURRENT_FOLDER, exist_ok=True)
-os.makedirs(PREVIOUS_FOLDER, exist_ok=True)
+s3 = boto3.client(
+    's3',
+    aws_access_key_id=AWS_ACCESS_KEY_ID,
+    aws_secret_access_key=AWS_SECRET_ACCESS_KEY,
+    region_name=REGION_NAME
+)
 
 
-def download_file(url, name):
-    # file_path = os.path.join(CURRENT_DIR, "price", name)
-    current_file = os.path.join(CURRENT_FOLDER, name)
-    previous_file = os.path.join(PREVIOUS_FOLDER, name)
+def download_file(url: str, name: str):
 
-    # якщо є поточний файл переносимо його в previous
-    if os.path.exists(current_file):
-        shutil.copyfile(current_file, previous_file)
+    current_key = f'raw/current/{name}'
+    previous_key = f'raw/previous/{name}'
 
-    # виконати запит GET до сервера та отримати відповідь
     try:
+        # якщо є файл в current - копіюємо в previous
+        try:
+            s3.head_object(
+                Bucket=BUCKET_NAME,
+                Key=current_key
+            )
+            s3.copy_object(
+                Bucket=BUCKET_NAME,
+                CopySource={"Bucket": BUCKET_NAME, "Key": current_key},
+                Key=previous_key
+            )
+            print(f'🔄 Файл {name} перенесено з current до previous')
+        except botocore.exceptions.ClientError as e:
+            if e.response["Error"]["Code"] == "404":
+                print(f'ℹ️ Файлу {name} ще немає в current, пропускаємо копіювання')
+            else:
+                raise
+
+        # качаємо "свіжий" прайс
         response = requests.get(url)
         response.raise_for_status()
 
-        # зберегти вміст відповіді в файл
-        with open(current_file, 'wb') as file:
-            file.write(response.content)
+        # завантажуємо в папку current
+        s3.put_object(
+            Bucket=BUCKET_NAME,
+            Key=current_key,
+            Body=response.content
+        )
+        print(f'✅ Файл {name} завантажено до s3://{BUCKET_NAME}/{current_key}')
 
-        print(f'Файл {name} було успішно завантажено та перезаписано в current.')
+    except Exception as e:
+        print(f'❌ Помилка при завантаженні {name}: {str(e)}')
 
-    except requests.exceptions.RequestException as e:
-        print(f'Виникла помилка під час завантаження {name}: {str(e)}')
-
-        # якщо є резервна версія - відновлюємо файл з previous
-        if os.path.exists(previous_file):
-            shutil.copyfile(previous_file, current_file)
-            print(f'↩️ Файл {name} відновлено з попередньої версії')
-        else:
-            print(f'❌ Немає попереднього файлу {name}, відновлення неможливе.')
+        # fallback: якщо помилка при завантаженні в current і є файл в previous намагаємося відновити файл з previous
+        try:
+            s3.head_object(
+                Bucket=BUCKET_NAME,
+                Key=current_key
+            )
+            s3.copy_object(
+                Bucket=BUCKET_NAME,
+                CopySource={"Bucket": BUCKET_NAME, "Key": previous_key},
+                Key=current_key
+            )
+            print(f'↩️ Файл {name} відновлено з previous')
+        except botocore.exceptions.ClientError:
+            print(f'❌ Немає резервного файлу {name} в previous')
 
 
 
