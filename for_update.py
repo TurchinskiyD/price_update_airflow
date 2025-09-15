@@ -1,27 +1,10 @@
-from processing import main_adr, main_atl, main_dasmart, main_dosp, main_kemp, main_norf, main_outfit, main_shamb, \
-    main_swa, main_trp
-import os
+import boto3
+import botocore
 from datetime import datetime
 import pandas as pd
 import requests
-import shutil
-import sys
-import boto3
-import botocore
+import os
 from config.config import AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, BUCKET_NAME, REGION_NAME
-
-
-# sys.path.append("..")
-# from config.config import link_list
-
-# CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
-# PRICE_DIR = os.path.join(CURRENT_DIR, "price")
-# CURRENT_FOLDER = os.path.join(PRICE_DIR, "current")
-# PREVIOUS_FOLDER = os.path.join(PRICE_DIR, "previous")
-#
-# # створюємо папки якщо їх ще немає
-# os.makedirs(CURRENT_FOLDER, exist_ok=True)
-# os.makedirs(PREVIOUS_FOLDER, exist_ok=True)
 
 s3 = boto3.client(
     's3',
@@ -32,34 +15,7 @@ s3 = boto3.client(
 
 
 def download_file(url: str, name: str):
-    # # file_path = os.path.join(CURRENT_DIR, "price", name)
-    # current_file = os.path.join(CURRENT_FOLDER, name)
-    # previous_file = os.path.join(PREVIOUS_FOLDER, name)
-    #
-    # # якщо є поточний файл переносимо його в previous
-    # if os.path.exists(current_file):
-    #     shutil.copyfile(current_file, previous_file)
-    #
-    # # виконати запит GET до сервера та отримати відповідь
-    # try:
-    #     response = requests.get(url)
-    #     response.raise_for_status()
-    #
-    #     # зберегти вміст відповіді в файл
-    #     with open(current_file, 'wb') as file:
-    #         file.write(response.content)
-    #
-    #     print(f'Файл {name} було успішно завантажено та перезаписано в current.')
-    #
-    # except requests.exceptions.RequestException as e:
-    #     print(f'Виникла помилка під час завантаження {name}: {str(e)}')
-    #
-    #     # якщо є резервна версія - відновлюємо файл з previous
-    #     if os.path.exists(previous_file):
-    #         shutil.copyfile(previous_file, current_file)
-    #         print(f'↩️ Файл {name} відновлено з попередньої версії')
-    #     else:
-    #         print(f'❌ Немає попереднього файлу {name}, відновлення неможливе.')
+
     current_key = f'raw/current/{name}'
     previous_key = f'raw/previous/{name}'
 
@@ -82,9 +38,11 @@ def download_file(url: str, name: str):
             else:
                 raise
 
+        # качаємо "свіжий" прайс
         response = requests.get(url)
         response.raise_for_status()
 
+        # завантажуємо в папку current
         s3.put_object(
             Bucket=BUCKET_NAME,
             Key=current_key,
@@ -95,6 +53,7 @@ def download_file(url: str, name: str):
     except Exception as e:
         print(f'❌ Помилка при завантаженні {name}: {str(e)}')
 
+        # fallback: якщо помилка при завантаженні в current і є файл в previous намагаємося відновити файл з previous
         try:
             s3.head_object(
                 Bucket=BUCKET_NAME,
